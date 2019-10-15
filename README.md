@@ -1,13 +1,17 @@
-# Capstone:
+# Capstone: Hit Pan
 
 ## Contact Info
-### Creator: Sage Klein
-### Email Address: sageklein@gmail.com
-### Slack Handle: Sage Klein
-### Github: (repo w/tickets)
+Creator: Sage Klein
 
-GOOGLE DOC LINK:
-https://docs.google.com/document/d/1oYZkgrjXfu6rhJ4fZnTcP-tt-WnNyVu8FjaebXpKFBM/edit?usp=sharing
+Email Address: sageklein@gmail.com
+
+Slack Handle: Sage Klein
+
+Github: (https://github.com/sageklein/Hit-Pan)
+
+Google Doc Link: https://docs.google.com/document/d/1oYZkgrjXfu6rhJ4fZnTcP-tt-WnNyVu8FjaebXpKFBM/edit?usp=sharing
+
+
 
 # Pre Proposal: 
 
@@ -31,6 +35,7 @@ Using session storage to mimic multiple users using the site concurrently.
 ### Final Proposal: (IT'S COMING)
 
 # Initial ERD
+![Image description](/boilerplate/ERD.jpg)
 
 
 # MVP Definition
@@ -48,8 +53,6 @@ https://dbdiagram.io/
 https://codepen.io/pen/
 
 https://reactjs.org/
-
-# ERD:
 
 
 # WireFrames or Link to Moqup:
