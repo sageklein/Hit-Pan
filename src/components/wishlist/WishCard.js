@@ -1,11 +1,11 @@
 // Author: Sage Klein
-// Purpose of the file to display individual make-up items owned by the user
+// Purpose of the file is to hold add wish list CRUD
 
 import React, { Component } from "react";
 import APIManager from "../../modules/APIManager";
-import "../collection/collection.css";
+import "../wishlist/wishlist.css";
 
-class CollectionCard extends Component {
+class WishCard extends Component {
 	state = {
 		modal: false
 	};
@@ -24,9 +24,8 @@ class CollectionCard extends Component {
 		});
 	};
 	render() {
-		return <h1>Collection Card</h1>;
+		return <h1>Wish Card</h1>;
 	}
 }
 
-export default CollectionCard;
-
+export default WishCard;

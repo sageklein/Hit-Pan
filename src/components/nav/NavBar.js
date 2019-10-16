@@ -18,18 +18,10 @@ class NavBar extends Component {
 
     render() {
         return (
-            <nav className="navbar navbar-light light-blue flex-md-nowrap p-0 ">
+            <nav className="">
         <div className="">
  
         </div>
-                <ul className="nav nav-pills nav-fill">
-                    {(this.props.user) ?
-                    <>
-                    <li><span className="nav-link" onClick={this.logOut}>Logout</span></li>
-                    </>
-                    : null
-                }
-                </ul>
             </nav>
         )
     }

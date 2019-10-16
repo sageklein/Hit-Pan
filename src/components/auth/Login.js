@@ -122,7 +122,7 @@ class Login extends Component {
 					</ModalBody>
 					<ModalFooter>
 						<Button className="add" onClick={this.handleLogin}>
-							Sign In!
+							Sign In
 						</Button>{" "}
 						<Button className="close" onClick={this.toggle}>
 							Cancel

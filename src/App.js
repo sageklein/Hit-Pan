@@ -1,17 +1,10 @@
-//Kennel.js equivalent for Sugar-Deadies
-// Authors: Gradi, Mark, Quin, Sage
+// Authors: Sage Klein
 // Purpose of the File: to hold functionality for sessionStorage for login, renders the <Navbar> and <ApplicationViews.js>
 
-//<Dashboard.js> renders the <NavBar> and <ApplicationViews> in the place of <Nutshell.js>
+//<Dashboard.js> renders the <NavBar> and <ApplicationViews> 
 import React, { Component } from 'react'
-
-//Style sheet for the elements contained within the Dashboard.js component.
-
-
 import ApplicationViews from './components/ApplicationViews'
-
 import NavBar from './components/nav/NavBar'
-//.css files hold the styling for the cards created on each of the lists.
 import './components/wishlist/wishlist.css'
 import '../src/index.css'
 
@@ -45,12 +38,12 @@ class Storage extends Component {
 
   render() {
     return (
-      <React.Fragment>
+      <>
         <NavBar user={this.state.user} triggerRender={this.triggerRender} clearUser={this.clearUser} />
         <ApplicationViews user={this.state.user}
           setUser={this.setUser}
           triggerRender={this.triggerRender} />
-      </React.Fragment>
+      </>
     )
   }
 }

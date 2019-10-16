@@ -74,7 +74,7 @@ export default class Register extends Component {
 				className="registrationButton"
 				onClick={this.toggle}
 			>
-				Register
+				Get Started
 			</Button>
 			<Modal
 				isOpen={this.state.modal}
@@ -124,10 +124,10 @@ export default class Register extends Component {
 					</form>
 				</ModalBody>
 				<ModalFooter>
-					<Button color="primary" onClick={this.handleRegister}>
-						Create Account!
+					<Button className="create" onClick={this.handleRegister}>
+						Create Account
 					</Button>
-					<Button color="secondary" onClick={this.toggle}>
+					<Button className="cancel" onClick={this.toggle}>
 						Cancel
 					</Button>
 				</ModalFooter>

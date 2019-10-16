@@ -1,5 +1,5 @@
-// Authors: Gradi, Mark, Quin, Sage
-// Purpose of the File: to house the routes/paths to each aspect of our app
+// Authors: Sage Klein
+// Purpose of the File: to house the routes/paths to each component
 
 import { Route } from "react-router-dom";
 import React, { Component } from "react";

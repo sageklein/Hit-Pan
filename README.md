@@ -1,6 +1,6 @@
 # Capstone: Hit Pan
 
-## Contact Info
+### Contact Info
 Creator: Sage Klein
 
 Email Address: sageklein@gmail.com
