@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { withRouter } from "react-router-dom";
 import WishList from "../wish/WishList";
 import CollectionList from "../collection/CollectionList";
 import SearchList from "../search/SearchList";
@@ -8,18 +9,23 @@ class Dashboard extends Component {
 	render() {
 		return (
 			<div className="main">
-				<section className="searchListDash">
+
+
+				    <section className="searchListDash">
 					<SearchList {...this.props} />
-				</section>
-				<section className="wishListDash">
+				    </section>
+
+
+				    <section className="wishListDash">
 					<WishList {...this.props} />
-				</section>
-				<section className="collectionListDash">
+				    </section>
+
+				    <section className="collectionListDash">
 					<CollectionList {...this.props} />
-				</section>
-			</div>
+				    </section> 
+             </div>
 		);
 	}
 }
 
-export default Dashboard;
+export default withRouter(Dashboard);

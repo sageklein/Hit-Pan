@@ -2,7 +2,6 @@
 // Purpose of the file to display all make-up on wishlist
 
 import React, { Component } from "react";
-import APIManager from "../../modules/APIManager";
 import WishCard from "./WishCard";
 import "./wishlist.css";
 

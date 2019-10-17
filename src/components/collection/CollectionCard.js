@@ -3,7 +3,7 @@
 
 import React, { Component } from "react";
 import APIManager from "../../modules/APIManager";
-import CollectionList from "../collection/CollectionList";
+// import CollectionList from "../collection/CollectionList";
 import "../collection/collection.css";
 
 class CollectionCard extends Component {
