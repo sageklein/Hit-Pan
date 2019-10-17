@@ -12,7 +12,7 @@ export default class ApplicationViews extends Component {
 
   render() {
     return (
-      <React.Fragment>
+      <>
 
         <Route
           exact path="/" render={props => {
@@ -29,7 +29,7 @@ export default class ApplicationViews extends Component {
           return <Register triggerRender={this.props.triggerRender} setUser={this.props.setUser} {...props} />
         }} />
 
-      </React.Fragment>
+      </>
     );
   }
 }

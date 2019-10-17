@@ -66,7 +66,6 @@ class Login extends Component {
         const closeBtn = <button className="close" onClick={this.toggle}>&times;</button>;
         return (
             <div>
-
                 <div className="registrationDiv">
                     <Button
                         className="loginButton"
@@ -129,8 +128,6 @@ class Login extends Component {
 						</Button>
                         </ModalFooter>
                     </Modal>
-
-                    {/* <Register /> calls the component Register and its contents from Register.js to display on the login page. */}
                     <Register />
                 </div>
             </div>

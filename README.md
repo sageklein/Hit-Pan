@@ -1,6 +1,6 @@
 # Capstone: Hit Pan
 
-### Contact Info
+### Contact Info:
 Creator: Sage Klein
 
 Email Address: sageklein@gmail.com
@@ -32,13 +32,14 @@ Upon login a user will be able to search a make-up API to add make up to their w
 Using session storage to mimic multiple users using the site concurrently.
 
 
-### Final Proposal: (IT'S COMING)
+### Final Proposal: 
+![Image description](/boilerplate/wireFrame.png)
 
 # Initial ERD
 ![Image description](/boilerplate/ERD.jpg)
 
 
-# MVP Definition
+# MVP Definition:
 - User-specific CRUD for make-up owned
 - Add user-specific make-up to wishlist
 - Display make-up owned 
@@ -55,9 +56,8 @@ https://codepen.io/pen/
 https://reactjs.org/
 
 
-# WireFrames or Link to Moqup:
-
-# Plan/outline of data relationship (props and state):
+# WireFrames/Data Relationships:
+https://www.figma.com/file/zktBnojjGWWSLoUR8YLjCv/Login?node-id=86192%3A0
 
 
 ## Dependencies used to create HitPan:
@@ -74,7 +74,7 @@ https://reactjs.org/
 10. Relational data
 11. Session Storage
 
-## How to Launch HitPan
+## How to Launch HitPan:
 
 1. Clone the repository from Github
 2. Open your terminal and type the command "npm install" to install React
