@@ -2,6 +2,7 @@
 // Purpose of the File: The actual factual dashboard.
 
 import React, { Component } from 'react';
+import { withRouter } from "react-router-dom";
 import Dashboard from "../dashboard/Dashboard"
 
 class Home extends Component {
@@ -12,4 +13,4 @@ class Home extends Component {
     }
 }
 
-export default Home
+export default withRouter(Home);

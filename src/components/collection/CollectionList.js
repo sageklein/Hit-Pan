@@ -2,7 +2,6 @@
 // Purpose of the file to display all make-up owned by user
 
 import React, { Component } from "react";
-import APIManager from "../../modules/APIManager";
 import CollectionCard from "../collection/CollectionCard";
 import "../collection/collection.css";
 
