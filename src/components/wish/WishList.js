@@ -3,7 +3,8 @@
 
 import React, { Component } from "react";
 import APIManager from "../../modules/APIManager";
-import "../wishlist/wishlist.css";
+import WishCard from "./WishCard";
+import "./wishlist.css";
 
 class WishList extends Component {
 	render() {

@@ -1,6 +1,7 @@
 /* You're going to eliminate the possibility of duplicate code by making a module
 whose sole responsibility is to interact with the API.*/
 
+
 const remoteURL = "http://localhost:5002"
 
 export default {

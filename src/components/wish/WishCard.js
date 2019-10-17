@@ -3,7 +3,7 @@
 
 import React, { Component } from "react";
 import APIManager from "../../modules/APIManager";
-import "../wishlist/wishlist.css";
+import "./wishlist.css";
 
 class WishCard extends Component {
 	state = {
@@ -19,7 +19,7 @@ class WishCard extends Component {
 	activeUserId = parseInt(sessionStorage.getItem("userId"));
 
 	handleDelete = id => {
-		APIManager.delete("events", id).then(() => {
+		APIManager.delete("wishId").then(() => {
 			this.props.getData();
 		});
 	};
