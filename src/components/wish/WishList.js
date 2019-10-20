@@ -9,7 +9,7 @@ class WishList extends Component {
 	render() {
         return(
             <>
-			<h1>Wish List</h1>
+			<h2>Wish List</h2>
 			<WishCard />
             </>
          )

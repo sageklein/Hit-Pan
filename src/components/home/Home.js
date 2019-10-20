@@ -3,12 +3,12 @@
 
 import React, { Component } from 'react';
 import { withRouter } from "react-router-dom";
-import Dashboard from "../dashboard/Dashboard"
+// import Dashboard from "../dashboard/Dashboard"
 
 class Home extends Component {
     render() {
         return (
-            <Dashboard />
+            <></>
         )
     }
 }
