@@ -9,7 +9,7 @@ class CollectionList extends Component {
 	render() {
 		return (
 			<>
-				<h1>Collection List</h1>
+				<h2>Collection List</h2>
 				<CollectionCard />
 			</>
 		);
