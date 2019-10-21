@@ -4,8 +4,8 @@ import React, { Component } from "react";
 class SearchList extends Component {
 	render() {
 		return (
-			<div className="main">
-                <h3>THIS IS THE SEARCH LIST</h3>
+			<div className="mainSearch">
+                <h3>This is Search ListT</h3>
 			</div>
 		);
 	}

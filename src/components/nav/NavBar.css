@@ -1,7 +1,7 @@
-.wishListDash, .collectionListDash, .searchListDash {
+.wishListDash, .collectionListDash, .searchListDash, .navbar-logout, .navbar-brand {
     font-family: Tahoma;
     font-size: 15px;
-    letter-spacing: 6px;
+    letter-spacing: 4px;
 }
 
 a {

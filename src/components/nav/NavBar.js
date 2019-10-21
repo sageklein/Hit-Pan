@@ -17,7 +17,7 @@ class NavBar extends Component {
 		return (
 			<div className="">
 				<nav className="navbar navbar-light bg-light justify-content-between">
-					<Link class="navbar-brand" to="/dashboard">
+					<Link className="navbar-brand" to="/dashboard">
 						Hit Pan
 					</Link>
 					<form className="form-inline">

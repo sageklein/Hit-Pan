@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { withRouter, Link } from "react-router-dom";
 import WishMain from "../wish/WishMain";
 import CollectionMain from "../collection/CollectionMain";
-import SearchList from "../search/SearchList";
+import SearchMain from "../search/SearchMain";
 import "./dashboard.css";
 
 class Dashboard extends Component {
@@ -12,9 +12,10 @@ class Dashboard extends Component {
 			<div className="container">
 				<div className="text-block">
 					<section className="searchListDash">
-						<h3>Search Make Up</h3>
-
-						<SearchList {...this.props} />
+						<Link to="../search/searchList.js">
+							Search Make Up
+						</Link>
+						<SearchMain {...this.props} />
 					</section>
 				</div>
 
