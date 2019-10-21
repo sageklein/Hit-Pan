@@ -30,12 +30,6 @@ class Register extends Component {
 		sessionStorage.setItem("userId", JSON.stringify(authObj));
 	};
 
-	triggerRender = () => {
-		this.setState({
-			user: this.isAuthenticated()
-		});
-	};
-
 	handleFieldChange = event => {
 		const stateToChange = {};
 		stateToChange[event.target.id] = event.target.value;
@@ -69,10 +63,10 @@ class Register extends Component {
 					sessionStorage.setItem("userId", createdUser.id);
 					sessionStorage.setItem("email", this.state.email);
 					sessionStorage.setItem("name", this.state.name);
-					this.triggerRender();
+					this.setUser();
 
 					//This determines which page you land on upon registration
-					this.props.history.push("/");
+					this.props.history.push("/Dashboard");
 				});
 			}
 		});

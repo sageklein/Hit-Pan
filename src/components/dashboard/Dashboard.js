@@ -7,6 +7,7 @@ import "./dashboard.css";
 
 class Dashboard extends Component {
 	render() {
+        console.log("rending dashboard")
 		return (
 			<div className="container">
 				<div className="text-block">
@@ -23,7 +24,7 @@ class Dashboard extends Component {
 					</section>
 				</div>
 
-				<div class="text-block">
+				<div className="text-block">
 					<h3>View Your Collection</h3>
 					<section className="collectionListDash">
 						<CollectionList {...this.props} />

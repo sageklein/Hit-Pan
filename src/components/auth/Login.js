@@ -10,136 +10,141 @@ import APIManager from "../../modules/APIManager";
 
 //Reactstrap Modal code from line 10 to 21
 class Login extends Component {
+	// Set initial state
 
-    // Set initial state
+	state = {
+		name: "",
+		email: "",
+		password: "",
+		userId: "",
+		modal: false
+	};
+	isAuthenticated = () => sessionStorage.getItem("userId") !== null;
 
-    state = {
-        name: "",
-        email: "",
-        password: "",
-        userId: "",
-        modal: false
-    };
+	setUser = userId => {
+		sessionStorage.setItem("userId", userId);
+	};
 
-    toggle = () => {
-        this.setState(prevState => ({
-            modal: !prevState.modal
-        }));
-    }
+	toggle = () => {
+		this.setState(prevState => ({
+			modal: !prevState.modal
+		}));
+	};
 
-    // Update state whenever an input field is edited
-    handleFieldChange = (evt) => {
-        const stateToChange = {}
-        stateToChange[evt.target.id] = evt.target.value
-        this.setState(stateToChange)
-    }
+	// Update state whenever an input field is edited
+	handleFieldChange = evt => {
+		const stateToChange = {};
+		stateToChange[evt.target.id] = evt.target.value;
+		this.setState(stateToChange);
+	};
 
-    handleLogin = (e) => {
-        e.preventDefault()
-        APIManager.getAll("users").then((users) => {
-            let singleUser = users.find(
-                user =>
-                    user.password.toLowerCase() === this.state.password.toLowerCase() &&
-                    user.email.toLowerCase() === this.state.email.toLowerCase()
-            );
-            if (this.state.email === "") {
-                window.alert("Please enter email")
-            } else if (this.state.password === "") {
-                window.alert("Please enter password")
-            } else if (this.state.name === "") {
-                window.alert("Please enter your name")
-            } else if (singleUser) {
-                sessionStorage.setItem("userId", singleUser.id);
-                sessionStorage.setItem("email", this.state.email);
-                sessionStorage.setItem("name", this.state.name);
-                                console.log(this.props);
-                // this.props.triggerRender();
+	handleLogin = e => {
+		e.preventDefault();
+		APIManager.getAll("users").then(users => {
+			let singleUser = users.find(
+				user =>
+					user.password.toLowerCase() ===
+						this.state.password.toLowerCase() &&
+					user.email.toLowerCase() === this.state.email.toLowerCase()
+			);
+			if (this.state.email === "") {
+				window.alert("Please enter email");
+			} else if (this.state.password === "") {
+				window.alert("Please enter password");
+			} else if (this.state.name === "") {
+				window.alert("Please enter your name");
+			} else if (singleUser) {
+				sessionStorage.setItem("userId", singleUser.id);
+				sessionStorage.setItem("email", this.state.email);
+				sessionStorage.setItem("name", this.state.name);
+				this.setUser(singleUser.id);
+				console.log("Navigating to Dashboard");
+				this.props.history.push("/dashboard");
+			} else {
+				window.alert("Credentials do not match");
+			}
+		});
+	};
 
-                this.props.history.push("/dashboard");
-            } else {
-                window.alert("Credentials do not match")
-            }
-
-        })
-    }
-
-
-    //Login modal code goes here. 👇
-    render() {
-        const closeBtn = <button className="close" onClick={this.toggle}>&times;</button>;
-        return (
-				<div className="registrationDiv">
-					<Button className="loginButton" onClick={this.toggle}>
-						Login
-					</Button>
-
-					<Modal
-						isOpen={this.state.modal}
-						toggle={this.toggle}
-						className={this.props.className}
-					>
-						<ModalHeader toggle={this.toggle} close={closeBtn}>
-							Please Sign In
-						</ModalHeader>
-						<ModalBody>
-							<form onSubmit={this.handleLogin}>
-								<fieldset>
-									<div className="formgrid">
-										<label htmlFor="inputEmail">Name</label>
-										<br></br>
-										<input
-											onChange={this.handleFieldChange}
-											type="text"
-											id="name"
-											placeholder="Name"
-											required=""
-											autoFocus=""
-										/>
-										<br></br>
-										<label htmlFor="inputEmail">
-											Email address
-										</label>
-										<br></br>
-										<input
-											onChange={this.handleFieldChange}
-											type="email"
-											id="email"
-											placeholder="Email address"
-											required=""
-											autoFocus=""
-										/>
-										<br></br>
-										<label htmlFor="inputPassword">
-											Password
-										</label>
-										<br></br>
-										<input
-											onChange={this.handleFieldChange}
-											type="password"
-											id="password"
-											placeholder="Password"
-											required=""
-										/>
-									</div>
-								</fieldset>
-							</form>
-						</ModalBody>
-						<ModalFooter>
-							<Button className="add" onClick={this.handleLogin}>
-								Sign In
-							</Button>{" "}
-							<Button className="close" onClick={this.toggle}>
-								Cancel
-							</Button>
-						</ModalFooter>
-					</Modal>
-
-					{/* <Register /> calls the component Register and its contents from Register.js to display on the login page. */}
-					<Register />
-				</div>
+	//Login modal code goes here. 👇
+	render() {
+		const closeBtn = (
+			<button className="close" onClick={this.toggle}>
+				&times;
+			</button>
 		);
-    }
+		return (
+			<div className="registrationDiv">
+				<Button className="loginButton" onClick={this.toggle}>
+					Login
+				</Button>
 
+				<Modal
+					isOpen={this.state.modal}
+					toggle={this.toggle}
+					className={this.props.className}
+				>
+					<ModalHeader toggle={this.toggle} close={closeBtn}>
+						Please Sign In
+					</ModalHeader>
+					<ModalBody>
+						<form onSubmit={this.handleLogin}>
+							<fieldset>
+								<div className="formgrid">
+									<label htmlFor="inputEmail">Name</label>
+									<br></br>
+									<input
+										onChange={this.handleFieldChange}
+										type="text"
+										id="name"
+										placeholder="Name"
+										required=""
+										autoFocus=""
+									/>
+									<br></br>
+									<label htmlFor="inputEmail">
+										Email address
+									</label>
+									<br></br>
+									<input
+										onChange={this.handleFieldChange}
+										type="email"
+										id="email"
+										placeholder="Email address"
+										required=""
+										autoFocus=""
+									/>
+									<br></br>
+									<label htmlFor="inputPassword">
+										Password
+									</label>
+									<br></br>
+									<input
+										onChange={this.handleFieldChange}
+										type="password"
+										id="password"
+										placeholder="Password"
+										required=""
+									/>
+								</div>
+							</fieldset>
+						</form>
+					</ModalBody>
+					<ModalFooter>
+						<Button className="add" onClick={this.handleLogin}>
+							Sign In
+						</Button>{" "}
+						<Button className="close" onClick={this.toggle}>
+							Cancel
+						</Button>
+					</ModalFooter>
+				</Modal>
+
+				{/* <Register /> calls the component Register and its contents from Register.js to display on the login page. */}
+				<Register />
+			</div>
+		);
+	}
 }
 
 export default withRouter(Login);

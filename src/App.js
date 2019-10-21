@@ -21,16 +21,9 @@ class Storage extends Component {
 	//returns true/false
 	isAuthenticated = () => sessionStorage.getItem("userId") !== null;
 
-	setUser = authObj => {
-		sessionStorage.setItem("userId", JSON.stringify(authObj));
-	};
-	triggerRender = () => {
-		this.setState({
-			user: this.isAuthenticated()
-		});
-	};
 
 	clearUser = () => {
+    console.log("clearing user", "clearUser")
 		sessionStorage.clear();
 	};
 
@@ -39,14 +32,13 @@ class Storage extends Component {
 			<>
 				<NavBar
 					user={this.state.user}
-					triggerRender={this.triggerRender}
+					isAuthenticated={this.isAuthenticated}
 					clearUser={this.clearUser}
 				/>
 
 				<ApplicationViews
 					user={this.state.user}
-					setUser={this.setUser}
-					triggerRender={this.triggerRender}
+					isAuthenticated={this.isAuthenticated}
 				/>
 			</>
 		);
