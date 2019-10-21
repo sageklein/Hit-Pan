@@ -1,41 +1,21 @@
 import React, { Component } from "react";
 import WishList from "../wish/WishList";
 import CollectionList from "../collection/CollectionList";
-
-class ProductView extends Component {
-	state = {};
-
-	render() {
-		return (
-			<>
-				<WishList />
-				<CollectionList />
-                
-			</>
-		);
-	}
-}
-
-export default ProductView;
-
-import React, { Component } from "react";
-import WishList from "../wish/WishList";
-import CollectionList from "../collection/CollectionList";
 import APIManager from "../../modules/APIManager";
-import AnimalCard from "../animal/AnimalCard";
+import WishCard from "../wish/WishCard";
 
-class EmployeeWithAnimals extends Component {
+class WishWithCollections extends Component {
   state = {
-    employee: {},
-    animals: []
+    wishs: {},
+    collections: []
   };
 
   getData = () => {
-    EmployeeManager.getWithAnimals(this.props.match.params.employeeId).then(
+    APIManager.getWithCollections(this.props.match.params.collectionId).then(
       APIResult => {
         this.setState({
-          employee: APIResult,
-          animals: APIResult.animals
+          collection: APIResult,
+          wishs: APIResult.wishs
         });
       }
     );
@@ -48,18 +28,19 @@ class EmployeeWithAnimals extends Component {
   render() {
     return (
       <div className="card">
-        <p>Employee: {this.state.employee.name}</p>
-        {this.state.animals.map(animal => (
-          <AnimalCard
-            key={animal.id}
-            animal={animal}
+        <p>Wish List: {this.state.wish.name}</p>
+        {this.state.wishs.map(wish => (
+          <WishCard
+            key={wish.id}
+            wish={wish}
             {...this.props}
             getData={this.getData}
           />
         ))}
       </div>
+      
     );
   }
 }
 
-export default EmployeeWithAnimals;
+export default WishWithCollections;

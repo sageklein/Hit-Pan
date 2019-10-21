@@ -9,7 +9,6 @@ class NavBar extends Component {
 
 	logOut = event => {
 		this.props.clearUser();
-		this.props.setUser();
 		this.props.history.push("/login");
 	};
 

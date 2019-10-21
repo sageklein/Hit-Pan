@@ -9,7 +9,7 @@
     padding: 1px 0px;
 }
 
-.regButton {
+.registrationButton {
     display: flex;
-    
+    justify-content: flex-end;
 }

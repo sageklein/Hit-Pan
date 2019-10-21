@@ -6,13 +6,12 @@ import SearchMain from "../search/SearchMain";
 import "./dashboard.css";
 
 class Dashboard extends Component {
-	render() {
-        console.log("rending dashboard")
+    render() {
 		return (
 			<div className="container">
 				<div className="text-block">
 					<section className="searchListDash">
-						<Link to="../search/searchList.js">
+						<Link to="/searchList">
 							Search Make Up
 						</Link>
 						<SearchMain {...this.props} />
