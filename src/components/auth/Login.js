@@ -140,8 +140,12 @@ class Login extends Component {
 					</ModalFooter>
 				</Modal>
 
-				{/* <Register /> calls the component Register and its contents from Register.js to display on the login page. */}
+                {/* <Register /> calls the component Register and its contents from Register.js to display on the login page. */}
+                <>
+                <div className="registrationButton">
 				<Register />
+                </div>
+                </>
 			</div>
 		);
 	}

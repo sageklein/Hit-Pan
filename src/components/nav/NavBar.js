@@ -9,7 +9,6 @@ class NavBar extends Component {
 
 	logOut = event => {
 		this.props.clearUser();
-		this.props.setUser();
 		this.props.history.push("/login");
 	};
 
@@ -17,7 +16,7 @@ class NavBar extends Component {
 		return (
 			<div className="">
 				<nav className="navbar navbar-light bg-light justify-content-between">
-					<Link class="navbar-brand" to="/dashboard">
+					<Link className="navbar-brand" to="/dashboard">
 						Hit Pan
 					</Link>
 					<form className="form-inline">

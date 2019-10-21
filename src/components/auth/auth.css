@@ -1,0 +1,15 @@
+.registrationDiv {
+    display: flex;
+    justify-content: center, space-around;
+    align-items: center;
+    flex-direction: row;
+    border-radius: 0px;
+    margin: 50px auto;
+    width: 840px;
+    padding: 1px 0px;
+}
+
+.registrationButton {
+    display: flex;
+    justify-content: flex-end;
+}
