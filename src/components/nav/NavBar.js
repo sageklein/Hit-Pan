@@ -10,10 +10,10 @@ class NavBar extends Component {
 
 	logOut = event => {
 		this.props.clearUser();
-		this.props.triggerRender();
+		this.props.setUser();
 		this.props.history.push("/login");
-	};
-
+    };
+    
 	render() {
 		return (
 			<div className="">

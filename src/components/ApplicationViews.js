@@ -25,15 +25,7 @@ export default class ApplicationViews extends Component {
 			/>
 
 			<Route
-				exact
-				path="/"
-				render={props => {
-					return <Login user={this.props.user} {...props} />;
-					// Returns the component which will show the dashboard
-				}}
-			/>
-
-			<Route
+      exact
 				path="/login"
 				render={props => {
 					return <Login setUser={this.props.setUser} {...props} />;
@@ -44,14 +36,20 @@ export default class ApplicationViews extends Component {
 				exact
 				path="/register"
 				render={props => {
-					return <Register {...this.props} props={this.props} />;
+					return (
+						<Register
+							setUser={this.props.setUser}
+							{...props}
+						/>
+					);
 				}}
 			/>
+
 			<Route
 				exact
 				path="/dashboard"
 				render={props => {
-					if (this.props.user) {
+					if (this.props.isAuthenticated()) {
 						return <Dashboard {...props} />;
 					} else {
 						return <Redirect to="/login" />;
