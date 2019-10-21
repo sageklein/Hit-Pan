@@ -7,6 +7,7 @@ h3 {
 }
 
 .text-block {
+    display: flex;
     border-radius: 8px;
     background-color: rgba(0, 0, 0, 0.50);
     padding: 2%;
@@ -15,6 +16,28 @@ h3 {
 }
 
 .container {
+    display: flex;
     justify-content: center, space-around;
     align-items: center;
+    flex-direction: column;
+    border-radius: 0px;
+    margin: 50px auto;
+    width: 840px;
+    padding: 1px 0px;
+}
+
+.wishListDash, .collectionListDash, .searchListDash {
+    font-family: Tahoma;
+    font-size: 15px;
+    letter-spacing: 6px;
+}
+
+a {
+    text-decoration: none;
+}
+a:link {
+    color: rgba(39, 37, 28, 0.877);
+}
+a:visited {
+    color: rgba(39, 37, 28, 0.877);
 }

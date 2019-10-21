@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import { withRouter } from "react-router-dom";
-import WishList from "../wish/WishList";
-import CollectionList from "../collection/CollectionList";
+import { withRouter, Link } from "react-router-dom";
+import WishMain from "../wish/WishMain";
+import CollectionMain from "../collection/CollectionMain";
 import SearchList from "../search/SearchList";
 import "./dashboard.css";
 
@@ -11,23 +11,28 @@ class Dashboard extends Component {
 		return (
 			<div className="container">
 				<div className="text-block">
-					<h3>Search Make Up</h3>
 					<section className="searchListDash">
+						<h3>Search Make Up</h3>
+
 						<SearchList {...this.props} />
 					</section>
 				</div>
 
 				<div className="text-block">
-					<h3>View Your Wish List</h3>
 					<section className="wishListDash">
-						<WishList {...this.props} />
+						<Link to="../wish/WishList.js">
+							View Your Wish List
+						</Link>
+						<WishMain {...this.props} />
 					</section>
 				</div>
 
 				<div className="text-block">
-					<h3>View Your Collection</h3>
 					<section className="collectionListDash">
-						<CollectionList {...this.props} />
+						<Link to="../collection/collectionList.js">
+							View Your Collection
+						</Link>
+						<CollectionMain {...this.props} />
 					</section>
 				</div>
 			</div>
