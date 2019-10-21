@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import { withRouter } from "react-router-dom";
+import { withRouter, Link } from "react-router-dom";
 import { Button } from "reactstrap";
-import Home from "../home/Home";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./NavBar.css";
 
@@ -12,19 +11,15 @@ class NavBar extends Component {
 		this.props.clearUser();
 		this.props.setUser();
 		this.props.history.push("/login");
-    };
-    
+	};
+
 	render() {
 		return (
 			<div className="">
 				<nav className="navbar navbar-light bg-light justify-content-between">
-					<Button
-						className="navbar-home"
-						type="submit"
-						onClick={Home}
-					>
+					<Link class="navbar-brand" to="/dashboard">
 						Hit Pan
-					</Button>
+					</Link>
 					<form className="form-inline">
 						<Button
 							className="navbar-logout"
