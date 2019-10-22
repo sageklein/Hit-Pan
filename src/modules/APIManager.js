@@ -18,8 +18,7 @@ export default {
 	getAllMakeUp() {
 		return fetch(
 			`http://makeup-api.herokuapp.com/api/v1/products.json?`
-		)
-			.then(result => result.json());
+		).then(result => result.json());
 	},
 
 	delete(resource, id) {
@@ -28,6 +27,17 @@ export default {
 		}).then(result => result.json());
   },
   
+	saveProduct: product => {
+		console.log(product);
+		return fetch("http://localhost:5002/products", {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json"
+			},
+			body: JSON.stringify(product)
+		}).then(response => response.json());
+	},
+
 	post(resource, newResource) {
 		return fetch(`${remoteURL}/${resource}`, {
 			method: "POST",

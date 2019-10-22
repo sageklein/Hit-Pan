@@ -13,3 +13,13 @@
     display: flex;
     justify-content: flex-end;
 }
+
+a {
+    text-decoration: none;
+}
+a:link {
+    color: rgba(39, 37, 28, 0.877);
+}
+a:visited {
+    color: rgba(39, 37, 28, 0.877);
+}

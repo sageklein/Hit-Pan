@@ -11,7 +11,7 @@ class Dashboard extends Component {
 			<div className="container">
 				<div className="text-block">
 					<section className="searchListDash">
-						<Link to="/searchList">
+						<Link to="/searchParent">
 							Search Make Up
 						</Link>
 						<SearchMain {...this.props} />

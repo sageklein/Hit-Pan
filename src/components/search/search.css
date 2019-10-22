@@ -3,3 +3,25 @@
   border-bottom: 1px solid #f48fb1;
   box-shadow: 0 1px 0 0 #f48fb1;
 }
+
+.searchBtnDiv
+.container-cards {
+    display: flex;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.50);
+    padding: 2%;
+    margin: .2em;
+    width: 850px;
+    font-family: Tahoma;
+    font-size: 15px;
+    letter-spacing: 6px;
+}
+a {
+    text-decoration: none;
+}
+a:link {
+    color: rgba(39, 37, 28, 0.877);
+}
+a:visited {
+    color: rgba(39, 37, 28, 0.877);
+}
