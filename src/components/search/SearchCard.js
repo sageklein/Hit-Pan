@@ -1,23 +1,37 @@
-import React from "react";
-import { MDBCol, MDBFormInline, MDBIcon } from "mdbreact";
 import { withRouter } from "react-router-dom";
+import React, { Component } from "react";
+import { Button } from "reactstrap";
+import APIManager from "../../modules/APIManager";
 
 class SearchCard extends Component {
-	render() {
-		return (
-			<MDBCol md="6">
-				<MDBFormInline className="md-form">
-					<MDBIcon icon="search" />
-					<input
-						className="form-control form-control-sm ml-3 w-75"
-						type="text"
-						placeholder="Search"
-						aria-label="Search"
-					/>
-				</MDBFormInline>
-			</MDBCol>
-		);
-	}
-};
+  handleSave = id => {
+    APIManager.saveProduct(id).then(() => this.props.getData());
+  };
+  render() {
+    return (
+		<div className="card">
+			<div className="card-content">
+				<h3>
+					Item{" "}
+					<span className="card-searchResults">
+						{this.props.productName}
+					</span>
+				</h3>
+                <div className="populateSearch">
+                    
+                </div>
+				<Button
+					type="button"
+					onClick={() => this.handleSave(this.props.productName)}
+				>
+					Save
+				</Button>
+
+			</div>
+		</div>
+	);
+  }
+}
+
 
 export default withRouter(SearchCard);

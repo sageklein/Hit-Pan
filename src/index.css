@@ -12,3 +12,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+a {
+    text-decoration: none;
+}
+a:link {
+    color: rgba(39, 37, 28, 0.877);
+}
+a:visited {
+    color: rgba(39, 37, 28, 0.877);
+}
