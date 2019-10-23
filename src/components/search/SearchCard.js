@@ -5,7 +5,8 @@ import APIManager from "../../modules/APIManager";
 
 class SearchCard extends Component {
   handleSave = id => {
-    APIManager.saveProduct(id).then(() => this.props.getData());
+    APIManager.saveProduct(id).then(() => this.props.getData())
+                  this.props.history.push("/searchCard");
   };
   render() {
     return (
@@ -14,7 +15,7 @@ class SearchCard extends Component {
 				<h3>
 					Item{" "}
 					<span className="card-searchResults">
-						{this.props.productName}
+						{this.props.product.name}
 					</span>
 				</h3>
                 <div className="populateSearch">

@@ -17,7 +17,7 @@ export default {
 
 	getAllMakeUp() {
 		return fetch(
-			`http://makeup-api.herokuapp.com/api/v1/products.json?`
+			"http://makeup-api.herokuapp.com/api/v1/products.json?"
 		).then(result => result.json());
 	},
 
