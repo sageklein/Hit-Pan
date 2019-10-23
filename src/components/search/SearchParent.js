@@ -4,19 +4,42 @@ import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import SearchCard from "../search/SearchCard"
 import SearchList from "../search/SearchList"
- 
-class SearchParent extends Component {
-	render() {
-		console.log("MAKE UP LIST: Render");
+import APIManager from "../../modules/APIManager";
+import "./search.css";
 
+class SearchParent extends Component {
+    state= {
+        products: []
+    }
+	getData = () => {
+		APIManager.getAllMakeUp()
+			.then(products => {
+				this.setState({
+                    products: products
+                });
+                console.log("makeUp Arrayray", this.state.products)
+			});
+    };
+    
+	render() {
 		return (
 			<>
-				<div className="container-cards">
-					<SearchList />
+				<div className="text-block">
+					<section className="wishListDash">
+						<SearchList getData={this.getData} {...this.props}/>
+					</section>
 				</div>
-
-				<div className="container-cards">
-					<SearchCard />
+				<div className="text-block">
+					<section className="wishListDash">
+                        {this.state.products.map(product =>(
+                        <SearchCard 
+                        key={product.id}
+                        product={product}
+                        {...this.props}/> 
+                        
+                        )) 
+                        }
+					</section>
 				</div>
 			</>
 		);
