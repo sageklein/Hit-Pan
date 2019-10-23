@@ -11,13 +11,13 @@ export default {
 	},
 	getAll(resource, userId) {
 		return fetch(
-			`${remoteURL}/${resource}?userId=${userId}&_sort=timeStamp`
+			`http://localhost:5002/${resource}?userId=${userId}&_sort=timeStamp`
 		).then(result => result.json());
 	},
 
-	getAllMakeUp() {
+	getAllMakeUp(brand, productType) {
 		return fetch(
-			"http://makeup-api.herokuapp.com/api/v1/products.json?"
+			`http://makeup-api.herokuapp.com/api/v1/products.json?brand=${brand}&product_type=${productType}`
 		).then(result => result.json());
 	},
 
@@ -25,19 +25,22 @@ export default {
 		return fetch(`http://localhost:5002/${resource}/${id}`, {
 			method: "DELETE"
 		}).then(result => result.json());
-  },
-  
-	saveProduct: product => {
-		console.log(product);
+	},
+
+	saveProduct: saveProduct => {
 		return fetch("http://localhost:5002/products", {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json"
 			},
-			body: JSON.stringify(product)
+			body: JSON.stringify(saveProduct)
 		}).then(response => response.json());
 	},
-
+	getAllCollection(userId) {
+		return fetch(`${remoteURL}/collections?userId=${userId}&_expand=collection`).then(
+			response => response.json()
+		);
+	},
 	post(resource, newResource) {
 		return fetch(`${remoteURL}/${resource}`, {
 			method: "POST",

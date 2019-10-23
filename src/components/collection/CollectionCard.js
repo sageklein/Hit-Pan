@@ -2,8 +2,9 @@
 // Purpose of the file to display individual make-up items owned by the user
 
 import React, { Component } from "react";
+import { withRouter } from "react-router-dom";
+import { Button } from "reactstrap";
 import APIManager from "../../modules/APIManager";
-// import CollectionList from "../collection/CollectionList";
 import "../collection/collection.css";
 
 class CollectionCard extends Component {
@@ -11,23 +12,45 @@ class CollectionCard extends Component {
 		modal: false
 	};
 
-	toggle = () => {
-		this.setState(prevState => ({
-			modal: !prevState.modal
-		}));
-	};
+	getAllCollection = () => {
+    //invoke the save function in LocationManger and re-direct to the location list.
+    this.setState({ loadingStatus: true });
+    APIManager.save(this.props.collectionId).then(() =>
+      this.props.history.push("/collections")
+    );
+  };
+	handleDeleteCollect = () => {
+    //invoke the delete function in LocationManger and re-direct to the location list.
+    this.setState({ loadingStatus: true });
+    APIManager.delete(this.props.collectionId).then(() =>
+      this.props.history.push("/collections")
+    );
+  };
 
-	activeUserId = parseInt(sessionStorage.getItem("userId"));
-
-	handleDelete = id => {
-		APIManager.delete("collectionId").then(() => {
-			this.props.getData();
-		});
-	};
 	render() {
-		return <h1>Collection Card</h1>;
+		return (
+			<div className="card">
+				<div className="card-content">
+					<h3>
+						Item{" "}
+						<div className="card-searchResults">
+							{this.props.collection}
+						</div>
+					</h3>
+
+					<Button
+						type="button"
+						onClick={() =>
+							this.handleDeleteCollect(this.props.collectionId)
+						}
+					>
+						Delete
+					</Button>
+				</div>
+			</div>
+		);
 	}
 }
 
-export default CollectionCard;
+export default withRouter(CollectionCard);
 

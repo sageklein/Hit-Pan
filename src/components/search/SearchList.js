@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Button, Input } from "reactstrap";
 import { withRouter } from "react-router-dom";
-import APIManager from "../../modules/APIManager"
 
 
 class SearchList extends Component {
@@ -35,7 +34,7 @@ class SearchList extends Component {
 					onChange={this.handleFieldChange}
 				></Input>
 				<Button
-					className="btn btn-outline-success my-2 my-sm-0"
+					className="btn btn-outline-dark my-2 my-sm-0"
 					type="submit"
 					required
 					onClick={this.newSearch}

@@ -30,6 +30,28 @@ h3 {
     width: 840px;
     padding: 1px 0px;
 }
+
+.btn,
+.form-control
+ {
+    display: flex;
+    direction: center;
+    font-family: Tahoma;
+    font-size: 15px;
+    letter-spacing: 6px;
+} 
+
+.form-control,
+.populateSearch {
+    display: flex;
+    border-radius: 0px;
+    margin: 20px auto;
+    width: 800px !important;
+    padding: 2px 4px !important;
+    padding-bottom: 5px;
+
+}
+
 a {
     text-decoration: none;
 }
