@@ -1,3 +1,18 @@
+h1 {
+    display: block;
+    direction: center;
+    font-family: Tahoma;
+    font-size: 8px;
+    letter-spacing: 6px;
+
+}
+h2 {
+    direction: center;
+    font-family: Tahoma;
+    font-size: 10px;
+    letter-spacing: 6px;
+}
+
 h3 {
     display: block;
     direction: center;
@@ -23,10 +38,10 @@ h3 {
     border-radius: 0px;
     margin: 50px auto;
     width: 840px;
-    padding: 1px 0px;
+    padding: 50px 860px;
 }
 
-.wishListDash, .collectionListDash, .searchListDash {
+.wishListDash, .collectionListDash,.searchListDash {
     font-family: Tahoma;
     font-size: 15px;
     letter-spacing: 6px;

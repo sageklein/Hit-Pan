@@ -7,9 +7,11 @@ import Login from "./auth/Login"
 import Register from "./auth/Register"
 import Dashboard from "./dashboard/Dashboard"
 import Home from "./home/Home"
+import SearchParent from "../components/search/SearchParent";
 import SearchList from "../components/search/SearchList"
 import SearchCard from "../components/search/SearchCard"
-import SearchParent from "../components/search/SearchParent";
+import CollectionList from "../components/collection/CollectionList";
+import CollectionCard from "../components/collection/CollectionCard";
 
 export default class ApplicationViews extends Component {
 
@@ -39,6 +41,27 @@ export default class ApplicationViews extends Component {
 				render={props => {
 					return (
 						<SearchCard setUser={this.props.setUser} {...props} />
+					);
+				}}
+			/>
+			<Route
+				exact
+				path="/collectionList"
+				render={props => {
+					return (
+						<CollectionList
+							setUser={this.props.setUser}
+							{...props}
+						/>
+					);
+				}}
+			/>
+			<Route
+				exact
+				path="/collectionCard"
+				render={props => {
+					return (
+						<CollectionCard setUser={this.props.setUser} {...props} />
 					);
 				}}
 			/>

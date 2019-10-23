@@ -12,18 +12,18 @@ class SearchParent extends Component {
         products: []
     }
 	getData = () => {
-		APIManager.getAllMakeUp()
+		APIManager.getAllMakeUp("fenty", "lipstick")
 			.then(products => {
 				this.setState({
                     products: products
                 });
-                console.log("makeUp Arrayray", this.state.products)
 			});
     };
     
 	render() {
 		return (
 			<>
+			<div className="container">
 				<div className="text-block">
 					<section className="wishListDash">
 						<SearchList getData={this.getData} {...this.props}/>
@@ -40,6 +40,7 @@ class SearchParent extends Component {
                         )) 
                         }
 					</section>
+				</div>
 				</div>
 			</>
 		);
