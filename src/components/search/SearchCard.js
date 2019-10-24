@@ -4,20 +4,46 @@ import { Button } from "reactstrap";
 import APIManager from "../../modules/APIManager";
 
 class SearchCard extends Component {
-	handleSaveWish = id => {
-		APIManager.saveProduct(id).then(() => this.props.getData());
+	state = {
+		productName: "",
+		productId: "",
+		allProducts: [],
+		products: [],
+		loadingStatus: true
+	};
+	handleSaveWish = obj => {
+		const newObj = {
+			userId: parseInt(sessionStorage.getItem("userId")),
+			name: obj.name,
+			brand: obj.brand,
+			price: obj.price,
+			img_link: obj.img_img
+		};
+		APIManager.saveProduct(newObj)
+			.then(response => response)
+			.then(() => this.props.getData());
 		this.props.history.push("/wishCard");
 	};
-	handleSaveCollect = () => {
-		APIManager.saveProduct().then(() => this.props.getData());
+	handleSaveCollect = obj => {
+		const newObj = {
+			userId: parseInt(sessionStorage.getItem("userId")),
+			name: obj.name,
+			brand: obj.brand,
+			price: obj.price,
+			img_link: obj.img_img,
+			productId: obj.productId
+		};
+		APIManager.saveProduct(newObj)
+			.then(response => response)
+			.then(() => this.props.getData());
 		this.props.history.push("/collectionCard");
 	};
 	render() {
+		console.log(this.props.product);
 		return (
 			<div className="card">
 				<div className="card-content">
 					<h3>
-						Item{" "}
 						<span className="card-searchResults">
 							{this.props.product.name}
 						</span>
@@ -26,15 +52,16 @@ class SearchCard extends Component {
 					<div className="populateSearch"></div>
 					<Button
 						type="button"
-						onClick={() =>
-							this.handleSaveWish(this.props.productName)
-						}
+						
+						onClick={() => this.handleSaveWish(this.props.product)}
 					>
-						Save to WishList
+						Save to Wish List
 					</Button>
 					<Button
 						type="button"
-						onClick={this.handleSaveCollect}
+						onClick={() =>
+							this.handleSaveCollect(this.props.product)
+						}
 					>
 						Save to Collection
 					</Button>

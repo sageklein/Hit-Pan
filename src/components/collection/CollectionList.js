@@ -10,7 +10,6 @@ class CollectionList extends Component {
 		collectionName: "",
 		collectionId: "",
 		allCollection: [],
-		collections: [],
 		loadingStatus: true
 	};
 
@@ -26,10 +25,12 @@ class CollectionList extends Component {
 
 	render() {
 		return (
-			<div className="searchBtnDiv">
-				<section className="wishListDash">
-					{this.state.products.map(product => (
+			<div className="text-block">
+				<section className="collectionParent">
+					{this.state.collections.map(product => (
 						<CollectionCard
+							user={this.props.user}
+							getData={this.getData}
 							key={product.id}
 							product={product}
 							{...this.props}

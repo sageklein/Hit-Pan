@@ -29,7 +29,7 @@ class Dashboard extends Component {
 
 				<div className="text-block">
 					<section className="collectionListDash">
-						<Link to="../collection/collectionList.js">
+						<Link to="../collection/collectionCard.js">
 							View Your Collection
 						</Link>
 						<CollectionMain {...this.props} />

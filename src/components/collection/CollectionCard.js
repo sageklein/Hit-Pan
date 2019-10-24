@@ -23,7 +23,7 @@ class CollectionCard extends Component {
     //invoke the delete function in LocationManger and re-direct to the location list.
     this.setState({ loadingStatus: true });
     APIManager.delete(this.props.collectionId).then(() =>
-      this.props.history.push("/collections")
+      this.props.history.push("/collectionCard")
     );
   };
 
@@ -32,12 +32,10 @@ class CollectionCard extends Component {
 			<div className="card">
 				<div className="card-content">
 					<h3>
-						Item{" "}
 						<div className="card-searchResults">
-							{this.props.collection}
+							{this.props.collectionId}
 						</div>
 					</h3>
-
 					<Button
 						type="button"
 						onClick={() =>
@@ -53,4 +51,3 @@ class CollectionCard extends Component {
 }
 
 export default withRouter(CollectionCard);
-

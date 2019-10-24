@@ -2,23 +2,29 @@
 // Purpose of the file to provide a link from dashboard to SearchList
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
-import CollectionCard from "..collection/CollectionCard";
-import CollectionList from "../search/CollectionList";
+
+import CollectionList from "../collection/CollectionList";
 import APIManager from "../../modules/APIManager";
-import "./search.css";
+import "./collection.css";
 
 class CollectionParent extends Component {
 	state = {
 		collections: []
 	};
 	getData = () => {
-		APIManager.getAllCollection("").then(collections => {
+        console.log(sessionStorage.getItem("userId"))
+		APIManager.getAllCollection(sessionStorage.getItem("userId")).then(collections => {
+            console.log(collections) 
 			this.setState({
 				collections: collections
 			});
 			console.log("makeUp Arrayray", this.state.collections);
 		});
-	};
+    };
+    
+    componentDidMount(){
+       this.getData() 
+    }
 
 	render() {
 		return (
@@ -27,22 +33,13 @@ class CollectionParent extends Component {
 					<div className="text-block">
 						<section className="collectionParent">
 							<CollectionList
+                            collections={this.state.collections}
 								getData={this.getData}
 								{...this.props}
 							/>
 						</section>
 					</div>
-					<div className="text-block">
-						<section className="collectionParent">
-							{this.state.collections.map(collection => (
-								<CollectionCard
-									key={collection.id}
-									collection={collection}
-									{...this.props}
-								/>
-							))}
-						</section>
-					</div>
+
 				</div>
 			</>
 		);

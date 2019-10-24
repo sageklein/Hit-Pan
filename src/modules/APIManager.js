@@ -15,9 +15,9 @@ export default {
 		).then(result => result.json());
 	},
 
-	getAllMakeUp(brand, productType) {
+	getAllMakeUp(productType) {
 		return fetch(
-			`http://makeup-api.herokuapp.com/api/v1/products.json?brand=${brand}&product_type=${productType}`
+			`http://makeup-api.herokuapp.com/api/v1/products.json?product_type=${productType}`
 		).then(result => result.json());
 	},
 
@@ -28,6 +28,7 @@ export default {
 	},
 
 	saveProduct: saveProduct => {
+		console.log(saveProduct)
 		return fetch("http://localhost:5002/products", {
 			method: "POST",
 			headers: {
@@ -37,7 +38,7 @@ export default {
 		}).then(response => response.json());
 	},
 	getAllCollection(userId) {
-		return fetch(`${remoteURL}/collections?userId=${userId}&_expand=collection`).then(
+		return fetch(`${remoteURL}/products?userId=${userId}`).then(
 			response => response.json()
 		);
 	},
@@ -61,3 +62,5 @@ export default {
 		}).then(data => data.json());
 	}
 };
+
+// http://localhost:5002/collections/userId=4&_expand=collection

@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Button, Input } from "reactstrap";
 import { withRouter } from "react-router-dom";
 
-
 class SearchList extends Component {
 	//set the initial state
 	state = {
@@ -10,17 +9,19 @@ class SearchList extends Component {
 		productId: "",
 		allProducts: [],
 		products: [],
-		loadingStatus: true
+		loadingStatus: true,
+		search: ""
 	};
 
 	handleFieldChange = evt => {
 		const stateToChange = {};
 		stateToChange[evt.target.id] = evt.target.value;
 		this.setState(stateToChange);
+		console.log(evt.target.value);
 	};
 
-	newSearch = () => {
-		this.props.getData();
+	newSearch = searchTerm => {
+		this.props.getData(searchTerm);
 	};
 
 	render() {
@@ -29,6 +30,7 @@ class SearchList extends Component {
 				<Input
 					className="form-control mr-sm-2"
 					type="search"
+					id="search"
 					placeholder="Search"
 					aria-label="Search"
 					onChange={this.handleFieldChange}
@@ -37,7 +39,7 @@ class SearchList extends Component {
 					className="btn btn-outline-dark my-2 my-sm-0"
 					type="submit"
 					required
-					onClick={this.newSearch}
+					onClick={() => this.newSearch(this.state.search)}
 				>
 					Search
 				</Button>
