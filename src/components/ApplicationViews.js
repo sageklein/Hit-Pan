@@ -10,10 +10,8 @@ import Home from "./home/Home"
 import SearchParent from "../components/search/SearchParent";
 import SearchList from "../components/search/SearchList"
 import SearchCard from "../components/search/SearchCard"
-import CollectionCard from "../components/collection/CollectionCard";
-import CollectionList from "../components/collection/CollectionList";
 import CollectionParent from "../components/collection/CollectionParent";
-
+import WishParent from "../components/wish/WishParent";
 export default class ApplicationViews extends Component {
 
   render() {
@@ -60,23 +58,10 @@ export default class ApplicationViews extends Component {
 			/>
 			<Route
 				exact
-				path="/collectionList"
+				path="/wishParent"
 				render={props => {
 					return (
-						<CollectionList
-							user={this.props.user}
-							setUser={this.props.setUser}
-							{...props}
-						/>
-					);
-				}}
-			/>
-			<Route
-				exact
-				path="/collectionCard"
-				render={props => {
-					return (
-						<CollectionCard
+						<WishParent
 							user={this.props.user}
 							setUser={this.props.setUser}
 							{...props}

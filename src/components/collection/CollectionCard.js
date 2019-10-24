@@ -13,19 +13,20 @@ class CollectionCard extends Component {
 	};
 
 	getAllCollection = () => {
-    //invoke the save function in LocationManger and re-direct to the location list.
-    this.setState({ loadingStatus: true });
-    APIManager.save(this.props.collectionId).then(() =>
-      this.props.history.push("/collections")
-    );
-  };
+		//invoke the save function in LocationManger and re-direct to the location list.
+		this.setState({ loadingStatus: true });
+		APIManager.saveProduct(this.props.product.id).then(
+			() => 
+			this.props.history.push("/collectionParent")
+		);
+	};
 	handleDeleteCollect = () => {
-    //invoke the delete function in LocationManger and re-direct to the location list.
-    this.setState({ loadingStatus: true });
-    APIManager.delete(this.props.collectionId).then(() =>
-      this.props.history.push("/collectionCard")
-    );
-  };
+		//invoke the delete function in LocationManger and re-direct to the location list.
+		this.setState({ loadingStatus: true });
+		APIManager.delete("products", this.props.product.id).then(
+			() => this.props.history.push("/collectionParent")
+		);
+	};
 
 	render() {
 		return (
@@ -33,13 +34,13 @@ class CollectionCard extends Component {
 				<div className="card-content">
 					<h3>
 						<div className="card-searchResults">
-							{this.props.collectionId}
+							{this.props.product.name}
 						</div>
 					</h3>
 					<Button
 						type="button"
 						onClick={() =>
-							this.handleDeleteCollect(this.props.collectionId)
+							this.handleDeleteCollect(this.state.product)
 						}
 					>
 						Delete

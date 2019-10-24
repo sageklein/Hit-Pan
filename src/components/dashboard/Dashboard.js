@@ -20,7 +20,7 @@ class Dashboard extends Component {
 
 				<div className="text-block">
 					<section className="wishListDash">
-						<Link to="../wish/WishList.js">
+						<Link to="WishParent">
 							View Your Wish List
 						</Link>
 						<WishMain {...this.props} />
@@ -29,7 +29,7 @@ class Dashboard extends Component {
 
 				<div className="text-block">
 					<section className="collectionListDash">
-						<Link to="../collection/collectionCard.js">
+						<Link to="/collectionParent">
 							View Your Collection
 						</Link>
 						<CollectionMain {...this.props} />
