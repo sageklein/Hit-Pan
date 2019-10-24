@@ -3,36 +3,82 @@
 
 import React, { Component } from "react";
 import APIManager from "../../modules/APIManager";
-
 import "./wishlist.css";
 
 class WishCard extends Component {
-  state = {
+	state = {
+		wish: "",
+		type: "",
+		loadingStatus: true,
+		imageUrl: "",
+		collectionId: "",
+		isWishValid: false
+	};
 
-  }
+	handleDelete = () => {
+		//invoke the delete function in APIManager and re-direct to the wish list.
+		this.setState({ loadingStatus: true });
+		APIManager.delete(this.props.id).then(() =>
+			this.props.history.push("/wishs")
+		);
+	};
 
-  handleClick = () => {
-    const newOrderObj = {
-      userId: this.props.userId,
-      wishId: this.props.wish.id
-    }
-    APIManager.save(addToCollection)
-    .then(() => {
-      this.props.getWishs();
-		this.props.history.push("/collectionCard");
-    })
-  }
+	componentDidMount() {
+		//get(id) from APIManager and hang on to that data; put it into state
+		APIManager.get(this.props.id).then(wish => {
+			if (wish.name) {
+				let isWishValid = true;
+			}
+			this.setState({
+				name: wish.name,
+				id: wish.id,
+				collectionId: wish.collectionId,
+				loadingStatus: false
+			});
+		});
+	}
 
-  render() {
+	render() {
+		if (this.state.loadingStatus) return <p>Loading...</p>;
+		if (!this.state.loadingStatus && this.state.isWishValid) {
+			return (
+				<div className="card">
+					<div className="card-content">
+						{/* <picture>
+            <img src={require(`./Images${this.state.url}`)} alt="My Dog" />
+          </picture> */}
+						<h3>
+							Name:{" "}
+							<span style={{ color: "darkslategrey" }}>
+								{this.state.name}
+							</span>
+						</h3>
+						<p>Type: {this.state.type}</p>
 
-    return (
-      <>
-      <h2>{this.props.wish.name}</h2>
-      <Button type="button" onClick={this.handleClick}>Delete</Button>
-      </>
-    )
-  }
-
+						<Button
+							type="button"
+							disabled={this.state.loadingStatus}
+							onClick={this.handleDelete}
+						>
+							Delete
+						</Button>
+						<Button
+							type="button"
+							onClick={() => {
+								this.props.history.push(
+									`/wishs/${this.props.wish.id}/edit`
+								);
+							}}
+						>
+							Edit
+						</Button>
+					</div>
+				</div>
+			);
+		} else {
+			return <Redirect to="WishList" />;
+		}
+	}
 }
 
-export default WishCard;
+export default withRouter(WishCard);

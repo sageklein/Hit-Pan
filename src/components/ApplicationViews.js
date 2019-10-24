@@ -10,8 +10,9 @@ import Home from "./home/Home"
 import SearchParent from "../components/search/SearchParent";
 import SearchList from "../components/search/SearchList"
 import SearchCard from "../components/search/SearchCard"
-import CollectionList from "../components/collection/CollectionList";
 import CollectionCard from "../components/collection/CollectionCard";
+import CollectionList from "../components/collection/CollectionList";
+import CollectionParent from "../components/collection/CollectionParent";
 
 export default class ApplicationViews extends Component {
 
@@ -46,10 +47,24 @@ export default class ApplicationViews extends Component {
 			/>
 			<Route
 				exact
+				path="/collectionParent"
+				render={props => {
+					return (
+						<CollectionParent
+							user={this.props.user}
+							setUser={this.props.setUser}
+							{...props}
+						/>
+					);
+				}}
+			/>
+			<Route
+				exact
 				path="/collectionList"
 				render={props => {
 					return (
 						<CollectionList
+							user={this.props.user}
 							setUser={this.props.setUser}
 							{...props}
 						/>
@@ -61,7 +76,11 @@ export default class ApplicationViews extends Component {
 				path="/collectionCard"
 				render={props => {
 					return (
-						<CollectionCard setUser={this.props.setUser} {...props} />
+						<CollectionCard
+							user={this.props.user}
+							setUser={this.props.setUser}
+							{...props}
+						/>
 					);
 				}}
 			/>
@@ -74,7 +93,6 @@ export default class ApplicationViews extends Component {
 					);
 				}}
 			/>
-
 			<Route
 				exact
 				path="/login"
