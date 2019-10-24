@@ -22,7 +22,7 @@ class SearchCard extends Component {
 		APIManager.saveProduct(newObj)
 			.then(response => response)
 			.then(() => this.props.getData());
-		this.props.history.push("/wishCard");
+		this.props.history.push("/wishParent");
 	};
 	handleSaveCollect = obj => {
 		const newObj = {
@@ -36,7 +36,7 @@ class SearchCard extends Component {
 		APIManager.saveProduct(newObj)
 			.then(response => response)
 			.then(() => this.props.getData());
-		this.props.history.push("/collectionCard");
+		this.props.history.push("/collectionParent");
 	};
 	render() {
 		console.log(this.props.product);

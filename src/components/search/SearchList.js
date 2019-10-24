@@ -17,7 +17,6 @@ class SearchList extends Component {
 		const stateToChange = {};
 		stateToChange[evt.target.id] = evt.target.value;
 		this.setState(stateToChange);
-		console.log(evt.target.value);
 	};
 
 	newSearch = searchTerm => {
