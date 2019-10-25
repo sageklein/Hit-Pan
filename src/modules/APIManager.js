@@ -27,9 +27,19 @@ export default {
 		}).then(result => result.json());
 	},
 
-	saveProduct: saveProduct => {
-		console.log(saveProduct)
-		return fetch("http://localhost:5002/products", {
+	saveProductToWish: saveProduct => {
+		console.log(saveProduct);
+		return fetch("http://localhost:5002/wishLists", {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json"
+			},
+			body: JSON.stringify(saveProduct)
+		}).then(response => response.json());
+	},
+	saveProductToCollection: saveProduct => {
+		console.log(saveProduct);
+		return fetch("http://localhost:5002/collections", {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json"
@@ -38,8 +48,13 @@ export default {
 		}).then(response => response.json());
 	},
 	getAllCollection(userId) {
-		return fetch(`${remoteURL}/products?userId=${userId}`).then(
-			response => response.json()
+		return fetch(`${remoteURL}/products?userId=${userId}`).then(response =>
+			response.json()
+		);
+	},
+	getAllWishItems(userId) {
+		return fetch(`${remoteURL}/products?userId=${userId}`).then(response =>
+			response.json()
 		);
 	},
 	post(resource, newResource) {

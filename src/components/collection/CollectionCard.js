@@ -15,16 +15,16 @@ class CollectionCard extends Component {
 	getAllCollection = () => {
 		//invoke the save function in LocationManger and re-direct to the location list.
 		this.setState({ loadingStatus: true });
-		APIManager.saveProduct(this.props.product.id).then(
-			() => 
-			this.props.history.push("/collectionParent")
-		);
+		APIManager.saveProductToCollection(this.props.product.id)
+			.then(() => this.props.getData())
+			.then(() => this.props.history.push("/collectionParent"));
 	};
 	handleDeleteCollect = () => {
 		//invoke the delete function in LocationManger and re-direct to the location list.
 		this.setState({ loadingStatus: true });
-		APIManager.delete("products", this.props.product.id).then(
-			() => this.props.history.push("/collectionParent")
+		APIManager.delete("collections", this.props.product.id)
+		.then(() => this.props.getData())
+		.then(() => this.props.history.push("/collectionParent")
 		);
 	};
 
@@ -32,11 +32,8 @@ class CollectionCard extends Component {
 		return (
 			<div className="card">
 				<div className="card-content">
-					<h3>
-						<div className="card-searchResults">
-							{this.props.product.name}
-						</div>
-					</h3>
+					<img src={this.props.product.image_link} alt=""></img>
+					<h3>{this.props.product.name}</h3>
 					<Button
 						type="button"
 						onClick={() =>

@@ -12,7 +12,7 @@ class CollectionList extends Component {
 
 	render() {
 		return (
-			<div className="text-block">
+			<div className="collection-block">
 				<section className="collectionParent">
 					{this.props.products.map(product => (
 						<CollectionCard
