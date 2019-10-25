@@ -9,7 +9,7 @@ class WishParent extends Component {
 		products: []
 	};
 	getData = () => {
-		APIManager.getAll("products", sessionStorage.getItem("userId")).then(
+		APIManager.getAll("wishLists", sessionStorage.getItem("userId")).then(
 			products => {
 				this.setState({
 					products: products

@@ -14,27 +14,24 @@ class WishCard extends Component {
 	getAllWishItems = () => {
 		//invoke the save function in LocationManger and re-direct to the location list.
 		this.setState({ loadingStatus: true });
-		APIManager.saveProduct(this.props.product.id).then(() =>
-			this.props.history.push("/wishParent")
-		);
+		APIManager.saveProduct(this.props.product.id)
+			.then(() => this.props.getData())
+			.then(() => this.props.history.push("/wishParent"));
 	};
 	handleDeleteWishItem = () => {
 		//invoke the delete function in LocationManger and re-direct to the location list.
 		this.setState({ loadingStatus: true });
-		APIManager.delete("products", this.props.product.id).then(() =>
-			this.props.history.push("/wishParent")
-		);
+		APIManager.delete("wishLists", this.props.product.id)
+			.then(() => this.props.getData())
+			.then(() => this.props.history.push("/wishParent"));
 	};
 
 	render() {
 		return (
 			<div className="card">
 				<div className="card-content">
-					<h3>
-						<div className="card-searchResults">
-							{this.props.product.name}
-						</div>
-					</h3>
+					<img src={this.props.product.image_link} alt=""></img>
+					<h3>{this.props.product.name}</h3>
 					<Button
 						type="button"
 						onClick={() =>

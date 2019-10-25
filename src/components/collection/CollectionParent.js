@@ -12,7 +12,7 @@ class CollectionParent extends Component {
 	};
 	getData = () => {
 		console.log(sessionStorage.getItem("userId"));
-		APIManager.getAll("products", sessionStorage.getItem("userId")).then(
+		APIManager.getAll("collections", sessionStorage.getItem("userId")).then(
 			products => {
 				this.setState({
 					products: products

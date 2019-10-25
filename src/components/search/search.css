@@ -1,54 +1,66 @@
-
-.active-pink-2 input[type="text"]:focus:not([readonly]) {
+.active-pink-2 input[type="text"]:focus:not([readOnly]) {
   border-bottom: 1px solid #f48fb1;
   box-shadow: 0 1px 0 0 #f48fb1;
 }
-h3 {
-    display: block;
-    direction: center;
-    font-family: Tahoma;
-    font-size: 15px;
-    letter-spacing: 6px;
-}
-
-.container-cards {
+.card
+.card-searchResults {
     display: flex;
-    border-radius: 8px;
+    flex-direction: column;
     background-color: rgba(0, 0, 0, 0.50);
     padding: 2%;
     margin: .2em;
-    width: 850px;
+    width: 800px;
 }
 
+.nameField {
+    display: flex;
+    width: 780px;
+    display: block;
+    font-family: Tahoma;
+    font-size: 16px;
+    letter-spacing: 4px;
+
+}
+.descriptionField {
+    display: flex;
+    width: 780px;
+    display: block;
+    font-family: Tahoma;
+    font-size: 14px;
+    letter-spacing: 3px;
+}
 .searchContainer {
     display: flex;
-    justify-content: center, space-around;
-    align-items: center;
+    justify-content: space-around;
     flex-direction: row;
     border-radius: 0px;
     margin: 50px auto;
-    width: 840px;
+    width: 880px;
     padding: 1px 0px;
 }
-
+.imgSpan {
+    display: flex;
+    justify-content: left, space-around;
+    flex-direction: row;
+    margin: 50px auto;
+    width: 80px;
+    padding: 1px 0px;
+}
 .btn,
 .form-control
  {
     display: flex;
-    direction: center;
     font-family: Tahoma;
     font-size: 15px;
     letter-spacing: 6px;
 } 
-
 .form-control,
 .populateSearch {
     display: flex;
-    border-radius: 0px;
-    margin: 20px auto;
+    margin: 20px auto !important;
     width: 800px !important;
     padding: 2px 4px !important;
-    padding-bottom: 5px;
+    padding-bottom: 5px !important;
 
 }
 
@@ -56,8 +68,8 @@ a {
     text-decoration: none;
 }
 a:link {
-    color: rgba(39, 37, 28, 0.877);
+    color: white;
 }
 a:visited {
-    color: rgba(39, 37, 28, 0.877);
+    color: white;
 }

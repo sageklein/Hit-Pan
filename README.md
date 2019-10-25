@@ -40,12 +40,14 @@ Using session storage to mimic multiple users using the site concurrently.
 
 
 # MVP Definition:
-- User can register an account and login
+- User can register an account
+- User can Login
 - User can search make-up from make-up API
 - User can add make-up to wishlist
-- User can add make-up to collection of make-up
-- User can rate make-up they own
-- User can add notes t0 make-up
+- User can add make-up to collection
+- User can Delete makeup from wishlist
+- User can Delete makeup from collection
+
 
 
 # Planning Links:

@@ -12,9 +12,7 @@ class SearchParent extends Component {
 		products: []
 	};
 	getData = (searchTerm) => {
-		console.log(searchTerm);
 		APIManager.getAllMakeUp(searchTerm).then(products => {
-			console.log(products);
 			this.setState({
 				products: products
 			});
