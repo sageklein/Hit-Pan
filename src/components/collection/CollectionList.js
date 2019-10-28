@@ -14,7 +14,7 @@ class CollectionList extends Component {
 		return (
 			<div className="collection-block">
 				<section className="collectionParent">
-					{this.props.products.map(product => (
+					{this.props.collections.map(product => (
 						<CollectionCard
 							user={this.props.user}
 							getData={this.getData}

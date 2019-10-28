@@ -22,6 +22,7 @@ export default {
 	},
 
 	delete(resource, id) {
+		console.log(resource, id)
 		return fetch(`http://localhost:5002/${resource}/${id}`, {
 			method: "DELETE"
 		}).then(result => result.json());
@@ -77,5 +78,3 @@ export default {
 		}).then(data => data.json());
 	}
 };
-
-// http://localhost:5002/collections/userId=4&_expand=collection

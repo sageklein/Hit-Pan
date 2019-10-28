@@ -8,14 +8,14 @@ import "./collection.css";
 
 class CollectionParent extends Component {
 	state = {
-		products: []
+		collections: []
 	};
 	getData = () => {
 		console.log(sessionStorage.getItem("userId"));
 		APIManager.getAll("collections", sessionStorage.getItem("userId")).then(
-			products => {
+			collection => {
 				this.setState({
-					products: products
+					collections: collection
 				});
 			}
 		);
@@ -25,9 +25,9 @@ class CollectionParent extends Component {
 		this.getData();
 	}
 
-	newCollection = () => {
-		this.props.getData();
-	};
+	// newCollection = () => {
+	// 	this.props.getData();
+	// };
 
 	render() {
 		return (
@@ -36,7 +36,7 @@ class CollectionParent extends Component {
 					<div className="text-block">
 						<section className="collectionParent">
 							<CollectionList
-								products={this.state.products}
+								collections={this.state.collections}
 								getData={this.getData}
 								{...this.props}
 							/>
