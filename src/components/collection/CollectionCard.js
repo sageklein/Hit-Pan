@@ -28,10 +28,11 @@ class CollectionCard extends Component {
 			.then(() => this.props.getData())
 			.then(() => this.props.history.push("/collectionParent"));
 	};
-	onRate(rating, e) {
+	onRate = (rating, e) => {
 		this.setState({
 			lastRating: rating,
-			isRating: false
+			isRating: false,
+
 		});
 		const { onRate: callback } = this.props;
 		callback && callback({ ...e, rating });
@@ -56,7 +57,7 @@ class CollectionCard extends Component {
 						/>
 					</h3>
 					<Button
-						className="deleteButton"
+						className="button"
 						type="button"
 						onClick={() =>
 							this.handleDeleteCollect(this.state.product)

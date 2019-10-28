@@ -11,15 +11,16 @@ class SearchParent extends Component {
 	state = {
 		products: []
 	};
-	getData = (searchTerm) => {
-		APIManager.getAllMakeUp(searchTerm).then(products => {
-			this.setState({
-				products: products
+	getData = (brand, productType) => {
+		APIManager.getAllMakeUp(brand, productType)
+		.then(products => {this.setState({
+			products: products
 			});
 		});
 	};
 
 	render() {
+		console.log(this.state.products)
 		return (
 			<>
 				<div className="container">

@@ -1,19 +1,14 @@
-.loginButton {
+.button {
     display: flex;
     justify-content: space-around;
-    align-items:left;
-    flex-direction: column;
     margin: 20px auto;
-    /* padding: 1px 0px; */
+    width: 100px;
+    display: block;
+    font-family: Tahoma;
+    font-size: 14px;
+    letter-spacing: 3px;
 }
-.registrationButton {
-    display: flex;
-    justify-content: space-around;
-    align-items:left;
-    flex-direction: column;
-    margin: 20px auto;
-    /* padding: 1px 0px; */
-}
+
 .container {
     display: flex;
     border-radius: 8px;

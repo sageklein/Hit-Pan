@@ -43,23 +43,27 @@ class SearchCard extends Component {
 		return (
 			<div className="card">
 				<span className="card-searchResults">
-					<h3 className="nameField">{this.props.product.name}
-					</h3>
+					<h3 className="nameField">{this.props.product.name}</h3>
 					<h2 className="descriptionField">
 						{this.props.product.description}
 					</h2>
+					<h1 className="descriptionField">
+						{this.props.product.price}
+					</h1>
 				</span>
 				<span className="imgSpan">
 					<img src={this.props.product.image_link} alt="" />
 				</span>
 				<div className="btn">
 					<Button
+						className="button"
 						type="button"
 						onClick={() => this.handleSaveWish(this.props.product)}
 					>
 						Save to Wish List
 					</Button>
 					<Button
+						className="button"
 						type="button"
 						onClick={() =>
 							this.handleSaveCollect(this.props.product)
