@@ -15,9 +15,9 @@ export default {
 		).then(result => result.json());
 	},
 
-	getAllMakeUp(productType) {
+	getAllMakeUp(brand, productType) {
 		return fetch(
-			`http://makeup-api.herokuapp.com/api/v1/products.json?product_type=${productType}`
+			`http://makeup-api.herokuapp.com/api/v1/products.json?brand=${brand}&product_type=${productType}`
 		).then(result => result.json());
 	},
 

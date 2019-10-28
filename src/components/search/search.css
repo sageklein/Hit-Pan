@@ -46,7 +46,16 @@
     width: 80px;
     padding: 1px 0px;
 }
-.btn,
+.button {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px auto;
+    width: 100px;
+    display: block;
+    font-family: Tahoma;
+    font-size: 14px;
+    letter-spacing: 3px;
+}
 .form-control
  {
     display: flex;

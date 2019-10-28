@@ -75,7 +75,7 @@ class Login extends Component {
 		);
 		return (
 			<div className="container">
-				<Button className="loginButton" onClick={this.toggle}>
+				<Button className="button" onClick={this.toggle}>
 					Login
 				</Button>
 
@@ -142,7 +142,7 @@ class Login extends Component {
 
                 {/* <Register /> calls the component Register and its contents from Register.js to display on the login page. */}
                 <>
-                <div className="registrationButton">
+                <div className="button">
 				<Register />
                 </div>
                 </>

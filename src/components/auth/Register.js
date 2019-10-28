@@ -81,7 +81,7 @@ class Register extends Component {
 		);
 		return (
 			<div>
-				<Button className="registrationButton" onClick={this.toggle}>
+				<Button className="button" onClick={this.toggle}>
 					Get Started
 				</Button>
 				<Modal
