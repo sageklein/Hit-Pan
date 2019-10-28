@@ -21,17 +21,18 @@ h3 {
     letter-spacing: 6px;
 }
 
-.wish-block {
+.wishParent {
     display: flex;
     border-radius: 8px;
     padding: 2%;
     margin: .2em;
     /* width: 880px; */
 }
-.card-searchResults {
+.card-content {
     display: flex;
+    flex-direction: column;
     border-radius: 8px;
-    background-color: rgba(0, 0, 0, 0.50);
+    background-color: white;
     padding: 2%;
     margin: .2em;
     width: 800px;
@@ -48,18 +49,24 @@ h3 {
     padding: 50px 860px;
 }
 
-.wishListDash, .collectionListDash,.searchListDash {
-    font-family: Tahoma;
-    font-size: 15px;
-    letter-spacing: 6px;
+.prodImg {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    margin: 50px auto;
+    height: auto;
+    width: 200px;
+    padding: 1px 0px;
 }
-
-a {
-    text-decoration: none;
+.button {
+    display: flex;
+    height: 60 !important;
+    width: 80!important;
+    background-color: #7F7F7F !important;
 }
-a:link {
-    color: rgba(39, 37, 28, 0.877);
-}
+a,
+a:link,
 a:visited {
-    color: rgba(39, 37, 28, 0.877);
+    color: white;
+    text-decoration: none;
 }

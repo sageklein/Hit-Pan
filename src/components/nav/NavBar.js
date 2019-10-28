@@ -14,7 +14,7 @@ class NavBar extends Component {
 
 	render() {
 		return (
-			<div className="">
+			<div className="navLinks">
 				<nav className="navbar navbar-light bg-light justify-content-between">
 					<Link className="navbar-brand" to="/dashboard">
 						Hit Pan
@@ -22,6 +22,7 @@ class NavBar extends Component {
 					<form className="form-inline">
 						<Button
 							className="navbar-logout"
+							color="bg-light"
 							type="submit"
 							onClick={this.logOut}
 						>

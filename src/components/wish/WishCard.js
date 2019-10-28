@@ -30,12 +30,17 @@ class WishCard extends Component {
 		return (
 			<div className="card">
 				<div className="card-content">
-					<img src={this.props.product.image_link} alt=""></img>
+					<img
+						src={this.props.product.image_link}
+						className="prodImg"
+						alt=""
+					></img>
 					<h3>{this.props.product.name}</h3>
 					<Button
+						className="button"
 						type="button"
 						onClick={() =>
-							this.handleDeleteWishItem(this.state.product)
+							this.handleDeleteWishItem(this.props.product)
 						}
 					>
 						Delete

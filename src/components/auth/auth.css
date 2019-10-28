@@ -22,12 +22,10 @@
     margin: .2em;
     width: 880px;
 }
-a {
-    text-decoration: none;
-}
-a:link {
-    color: rgba(39, 37, 28, 0.877);
-}
+
+a,
+a:link,
 a:visited {
-    color: rgba(39, 37, 28, 0.877);
+    color: white;
+    text-decoration: none;
 }
