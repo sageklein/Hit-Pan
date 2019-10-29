@@ -80,7 +80,7 @@ class Register extends Component {
 			</button>
 		);
 		return (
-			<div>
+			<>
 				<Button className="button" onClick={this.toggle}>
 					Get Started
 				</Button>
@@ -145,7 +145,7 @@ class Register extends Component {
 						</Button>
 					</ModalFooter>
 				</Modal>
-			</div>
+			</>
 		);
 	}
 }

@@ -22,21 +22,15 @@ class SearchList extends Component {
 	};
 
 
-	newSearch = (brand, productType) => {
-		this.props.getData(brand, productType);
-		console.log(brand, productType);
-	};
 
 
-	// search = () => {
-	// 	let brand = document.getElementById("brand");
-	// 	let productType = document.getElementById("productType");
-	// 	let brandValue = brand.value
-	// 	let productValue = productType.value
-	// 	console.log(brandValue, productValue)
-	// 	this.props.getData(brandValue, productValue)
+	search = () => {
+		console.log(this.state.brand, this.state.productType)
+		let brand = this.state.brand
+		let productType = this.state.productType
+		this.props.getData(brand, productType)
 
-	// }
+	}
 
 	render() {
 		return (

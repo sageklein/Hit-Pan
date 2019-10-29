@@ -2,13 +2,17 @@
     font-family: Tahoma;
     font-size: 15px;
     letter-spacing: 4px;
+    color: black !important;
 }
 a {
     text-decoration: none;
 }
 a:link {
-    color: rgba(39, 37, 28, 0.877)!important;
+    color: #7F7F7F;
 }
 a:visited {
-    color: rgba(39, 37, 28, 0.877)!important;
+    color: #7F7F7F;
+}
+.navbar-brand {
+    color: black !important;
 }

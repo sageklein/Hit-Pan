@@ -75,78 +75,77 @@ class Login extends Component {
 		);
 		return (
 			<div className="container">
-				<Button className="button" onClick={this.toggle}>
-					Login
-				</Button>
+				<div className="authContainer">
+					<Button className="button" onClick={this.toggle}>
+						Login
+					</Button>
 
-				<Modal
-					isOpen={this.state.modal}
-					toggle={this.toggle}
-					className={this.props.className}
-				>
-					<ModalHeader toggle={this.toggle} close={closeBtn}>
-						Please Sign In
-					</ModalHeader>
-					<ModalBody>
-						<form onSubmit={this.handleLogin}>
-							<fieldset>
-								<div className="formgrid">
-									<label htmlFor="inputEmail">Name</label>
-									<br></br>
-									<input
-										onChange={this.handleFieldChange}
-										type="text"
-										id="name"
-										placeholder="Name"
-										required=""
-										autoFocus=""
-									/>
-									<br></br>
-									<label htmlFor="inputEmail">
-										Email address
-									</label>
-									<br></br>
-									<input
-										onChange={this.handleFieldChange}
-										type="email"
-										id="email"
-										placeholder="Email address"
-										required=""
-										autoFocus=""
-									/>
-									<br></br>
-									<label htmlFor="inputPassword">
-										Password
-									</label>
-									<br></br>
-									<input
-										onChange={this.handleFieldChange}
-										type="password"
-										id="password"
-										placeholder="Password"
-										required=""
-									/>
-								</div>
-							</fieldset>
-						</form>
-					</ModalBody>
-					<ModalFooter>
-						<Button className="add" onClick={this.handleLogin}>
-							Sign In
-						</Button>{" "}
-						<Button className="close" onClick={this.toggle}>
-							Cancel
-						</Button>
-					</ModalFooter>
-				</Modal>
+					<Modal
+						isOpen={this.state.modal}
+						toggle={this.toggle}
+						className={this.props.className}
+					>
+						<ModalHeader toggle={this.toggle} close={closeBtn}>
+							Please Sign In
+						</ModalHeader>
+						<ModalBody>
+							<form onSubmit={this.handleLogin}>
+								<fieldset>
+									<div className="formgrid">
+										<label htmlFor="inputEmail">Name</label>
+										<br></br>
+										<input
+											onChange={this.handleFieldChange}
+											type="text"
+											id="name"
+											placeholder="Name"
+											required=""
+											autoFocus=""
+										/>
+										<br></br>
+										<label htmlFor="inputEmail">
+											Email address
+										</label>
+										<br></br>
+										<input
+											onChange={this.handleFieldChange}
+											type="email"
+											id="email"
+											placeholder="Email address"
+											required=""
+											autoFocus=""
+										/>
+										<br></br>
+										<label htmlFor="inputPassword">
+											Password
+										</label>
+										<br></br>
+										<input
+											onChange={this.handleFieldChange}
+											type="password"
+											id="password"
+											placeholder="Password"
+											required=""
+										/>
+									</div>
+								</fieldset>
+							</form>
+						</ModalBody>
+						<ModalFooter>
+							<Button className="add" onClick={this.handleLogin}>
+								Sign In
+							</Button>{" "}
+							<Button className="close" onClick={this.toggle}>
+								Cancel
+							</Button>
+						</ModalFooter>
+					</Modal>
 
-                {/* <Register /> calls the component Register and its contents from Register.js to display on the login page. */}
-                <>
-                <div className="button">
-				<Register />
-                </div>
-                </>
+					{/* <Register /> calls the component Register and its contents from Register.js to display on the login page. */}
+
+						<Register className="button" />
 				</div>
+			</div>
 		);
 	}
 }

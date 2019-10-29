@@ -1,21 +1,31 @@
 .button {
     display: flex;
-    justify-content: space-around;
-    margin: 20px auto;
+    flex-direction: row;
+    align-self: flex-end;
     width: 100px;
     display: block;
     font-family: Tahoma;
     font-size: 14px;
     letter-spacing: 3px;
 }
-
+.authContainer {
+    display: flex;
+    align-items: left;
+    justify-content: center, left;
+    background-image: url(../../images/splashPic.jpeg);
+    background-repeat: repeat-x; 
+    background-size: cover; 
+    height: 600px;
+    width: 880px;
+}
 .container {
     display: flex;
     border-radius: 8px;
     background-color: rgba(0, 0, 0, 0.50);
     padding: 2%;
     margin: .2em;
-    width: 880px;
+    height: auto;
+    width: 900px;
 }
 
 a,
