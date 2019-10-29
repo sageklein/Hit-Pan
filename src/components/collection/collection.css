@@ -37,18 +37,8 @@ h3 {
     margin: .2em;
     width: 800px;
 }
-.container
- {
-    display: flex;
-    justify-content: center, space-around;
-    align-items: center;
-    flex-direction: column;
-    border-radius: 0px;
-    margin: 50px auto;
-    width: 840px;
-    padding: 50px 860px;
-}
-.button {
+
+/* .button {
     display: flex;
     justify-content: space-around;
     margin: 20px auto;
@@ -57,7 +47,7 @@ h3 {
     font-family: Tahoma;
     font-size: 14px;
     letter-spacing: 3px;
-}
+} */
 .prodImg {
     display: flex;
     justify-content: space-around;

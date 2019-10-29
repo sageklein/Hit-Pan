@@ -11,27 +11,48 @@ class Dashboard extends Component {
 			<div className="container">
 				<div className="text-block">
 					<section className="searchListDash">
-						<Link to="/searchParent">
+						<Link className="linkSearch" to="/searchParent">
 							Search Make Up
 						</Link>
+						<div className="imgParent">
+							<img
+								className="imgSpan"
+								src={require("../../images/splashPic.jpeg")}
+								alt=""
+							/>
+						</div>
 						<SearchMain {...this.props} />
 					</section>
 				</div>
 
 				<div className="text-block">
 					<section className="wishListDash">
-						<Link to="WishParent">
+						<Link className="linkWish" to="WishParent">
 							View Your Wish List
 						</Link>
+						<div className="imgParent">
+							<img
+								className="imgSpan"
+								src={require("../../images/splashPic.jpeg")}
+								alt=""
+							/>
+						</div>
 						<WishMain {...this.props} />
 					</section>
 				</div>
 
 				<div className="text-block">
 					<section className="collectionListDash">
-						<Link to="/collectionParent">
+						<Link className="linkCollection" to="/collectionParent">
 							View Your Collection
 						</Link>
+						<div className="imgParent">
+							<img
+								className="imgSpan"
+								src={require("../../images/splashPic.jpeg")}
+								alt=""
+							/>
+						</div>
 						<CollectionMain {...this.props} />
 					</section>
 				</div>
