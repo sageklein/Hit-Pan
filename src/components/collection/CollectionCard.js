@@ -1,12 +1,13 @@
 // Author: Sage Klein
 // Purpose of the file to display individual make-up items owned by the user
-import Rater from "react-rater";
+import Rating from "react-rating";
 import "react-rater/lib/react-rater.css";
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
-import { Button } from "reactstrap";
 import APIManager from "../../modules/APIManager";
+import Comment from "./CommentForm"
 import "../collection/collection.css";
+
 
 class CollectionCard extends Component {
 	state = {
@@ -27,15 +28,16 @@ class CollectionCard extends Component {
 			.then(() => this.props.getData())
 			.then(() => this.props.history.push("/collectionParent"));
 	};
-	onRate = (rating, e) => {
-		this.setState({
-			lastRating: rating,
-			isRating: false
-		});
-		const { onRate: callback } = this.props;
-		callback && callback({ ...e, rating });
+	setCondition = evt => {
+		let collections = {
+			rating: evt
+		};
+		APIManager.patch(
+			"collections",
+			collections,
+			this.props.product.id,
+		).then(response => response);
 	};
-
 	render() {
 		return (
 			<div className="card">
@@ -45,24 +47,33 @@ class CollectionCard extends Component {
 						alt=""
 						className="prodImg"
 					></img>
-					<h3>{this.props.product.name}</h3>
-					<h3 className="rating">
-						<Rater
-							total={5}
-							rating={this.props.product.rating}
-							onRate={this.state.rating}
-							onRating={this.state.rating}
+					<div className="cardProdName">
+						<h2>Product Name: {this.props.product.name}</h2>
+					</div>
+					<div className="cardProdPrice">
+						<h2>Product Price: ${this.props.product.price}</h2>
+					</div>
+					<div className="rating">
+						<h2>Rate Product:</h2>
+						<Rating
+							id="condition"
+							initialRating={this.props.product.rating}
+							onClick={evt => this.setCondition(evt)}
 						/>
-					</h3>
-					<Button
+					</div>{" "}
+					<div>
+						<h2>Add Notes:</h2>
+						<Comment />
+					</div>
+					<button
 						className="button"
 						type="button"
 						onClick={() =>
 							this.handleDeleteCollect(this.state.product)
 						}
 					>
-						Delete
-					</Button>
+						Remove Product
+					</button>
 				</div>
 			</div>
 		);
