@@ -18,7 +18,8 @@ export default {
 	getAllMakeUp(brand, productType) {
 		return fetch(
 			`http://makeup-api.herokuapp.com/api/v1/products.json?brand=${brand}&product_type=${productType}`
-		).then(result => result.json());
+		).then(results => results.json())
+		// .then(results => results.map(this.mapApiProductToProduct));
 	},
 
 	delete(resource, id) {
@@ -26,6 +27,17 @@ export default {
 		return fetch(`http://localhost:5002/${resource}/${id}`, {
 			method: "DELETE"
 		}).then(result => result.json());
+	},
+
+	mapApiProductToProduct(apiProduct) {
+		return {
+			name: apiProduct.name,
+			brand: apiProduct.brand,
+			productId: apiProduct.productId,
+			description: apiProduct.description,
+			image_link: apiProduct.image_link,
+			price: apiProduct.price
+		}
 	},
 
 	saveProductToWish: saveProduct => {
@@ -68,9 +80,9 @@ export default {
 		}).then(data => data.json());
 	},
 
-	update(resource, editedResource) {
-		return fetch(`${remoteURL}/${resource}/${editedResource.id}`, {
-			method: "PUT",
+	patch(resource, editedResource, id) {
+		return fetch(`${remoteURL}/${resource}/${id}`, {
+			method: "PATCH",
 			headers: {
 				"Content-Type": "application/json"
 			},
