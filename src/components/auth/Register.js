@@ -81,9 +81,10 @@ class Register extends Component {
 		);
 		return (
 			<>
-				<Button className="button" onClick={this.toggle}>
+				<button className="authButton" onClick={this.toggle}>
 					Get Started
-				</Button>
+				</button>
+
 				<Modal
 					isOpen={this.state.modal}
 					toggle={this.toggle}

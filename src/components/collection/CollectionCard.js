@@ -8,7 +8,6 @@ import { Button } from "reactstrap";
 import APIManager from "../../modules/APIManager";
 import "../collection/collection.css";
 
-
 class CollectionCard extends Component {
 	state = {
 		modal: false
@@ -31,12 +30,11 @@ class CollectionCard extends Component {
 	onRate = (rating, e) => {
 		this.setState({
 			lastRating: rating,
-			isRating: false,
-
+			isRating: false
 		});
 		const { onRate: callback } = this.props;
 		callback && callback({ ...e, rating });
-	}
+	};
 
 	render() {
 		return (
@@ -51,7 +49,7 @@ class CollectionCard extends Component {
 					<h3 className="rating">
 						<Rater
 							total={5}
-							rating={0}
+							rating={this.props.product.rating}
 							onRate={this.state.rating}
 							onRating={this.state.rating}
 						/>

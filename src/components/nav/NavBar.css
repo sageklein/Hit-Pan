@@ -4,14 +4,11 @@
     letter-spacing: 4px;
     color: black !important;
 }
-a {
-    text-decoration: none;
-}
-a:link {
-    color: #7F7F7F;
-}
+a,
+a:link,
 a:visited {
-    color: #7F7F7F;
+	color: #7F7F7F;
+	text-decoration: none !important;
 }
 .navbar-brand {
     color: black !important;

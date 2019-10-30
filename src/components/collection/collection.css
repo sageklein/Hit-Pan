@@ -1,66 +1,54 @@
 h1 {
-    display: block;
-    direction: center;
-    font-family: Tahoma;
-    font-size: 8px;
-    letter-spacing: 6px;
-
+	display: block;
+	direction: center;
+	font-family: Tahoma;
+	font-size: 8px;
+	letter-spacing: 6px;
 }
 h2 {
-    direction: center;
-    font-family: Tahoma;
-    font-size: 10px;
-    letter-spacing: 6px;
+	direction: center;
+	font-family: Tahoma;
+	font-size: 10px;
+	letter-spacing: 6px;
 }
 
 h3 {
-    display: block;
-    direction: center;
-    font-family: Tahoma;
-    font-size: 15px;
-    letter-spacing: 6px;
+	display: block;
+	direction: center;
+	font-family: Tahoma;
+	font-size: 15px;
+	letter-spacing: 6px;
 }
 
 .collection-block {
-    display: flex;
-    border-radius: 8px;
-    padding: 2%;
-    margin: .2em;
-    /* width: 880px; */
+	display: flex;
+	border-radius: 8px;
+	padding: 2%;
+	margin: 0.2em;
+	/* width: 880px; */
 }
 .card-content {
-    display: flex;
-    flex-direction: column;
-    border-radius: 8px;
-    background-color: white;
-    padding: 2%;
-    margin: .2em;
-    width: 800px;
+	/* display: flex; */
+	flex-direction: column;
+	border-radius: 8px;
+	background-color: white;
+	padding: 2%;
+	margin: 0.2em;
+	width: 800px;
 }
 
-/* .button {
-    display: flex;
-    justify-content: space-around;
-    margin: 20px auto;
-    width: 100px;
-    display: block;
-    font-family: Tahoma;
-    font-size: 14px;
-    letter-spacing: 3px;
-} */
 .prodImg {
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row;
-    margin: 50px auto;
-    height: auto;
-    width: 200px;
-    padding: 1px 0px;
+	display: flex;
+	justify-content: space-around;
+	flex-direction: row;
+	margin: 50px auto;
+	height: auto;
+	width: 200px;
+	padding: 1px 0px;
 }
 a,
 a:link,
 a:visited {
-    color: white;
-    text-decoration: none;
+	color: #7f7f7f;
+	text-decoration: none !important;
 }
-
