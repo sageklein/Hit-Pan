@@ -1,12 +1,10 @@
-
 .text-block {
-	border-radius: 8px;
-	display: flex;
-	flex-direction: row;
-	background-color: rgba(0, 0, 0, 0.5);
-	padding: 2%;
-	margin: 0.2em;
-	width: 895px;
+    /* border-radius: 8px; */
+    /* display: flex; */
+    /* flex-direction: row; */
+    padding: 1.5%;
+    /* margin: 0.2em; */
+    width: 950px;
 }
 
 .linkSearch .linkWish .linkCollection {
@@ -14,21 +12,69 @@
 	justify-content: flex-start;
 }
 
-.wishListDash,
-.collectionListDash,
 .searchListDash {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	flex-direction: row;
+	justify-content: center;
+	background-image: url(../../images/searorwish.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
 	font-family: Tahoma;
 	font-size: 20px;
-    letter-spacing: 4px;
-    width: 100%;
+	letter-spacing: 4px;
+	height: 400px;
+	width: 100%;
+}
+.wishListDash {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-direction: row;
+	justify-content: center;
+	background-image: url(../../images/yellow.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-family: Tahoma;
+	font-size: 20px;
+	letter-spacing: 4px;
+	height: 400px;
+	width: 100%;
+}
+.collectionListDash {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-direction: row;
+	justify-content: center;
+	background-image: url(../../images/pink.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-family: Tahoma;
+	font-size: 20px;
+	letter-spacing: 4px;
+	height: 400px;
+	width: 100%;
+}
+.apiDash {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	/* flex-direction: row; */
+	justify-content: center;
+	background-image: url(/static/media/api.85f87175.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-family: Tahoma;
+	font-size: 20px;
+	letter-spacing: 4px;
+	height: 800px;
+	width: 100%;
 }
 a,
 a:link,
 a:visited {
-	color: #7F7F7F;
+	color: #7f7f7f;
 	text-decoration: none !important;
 }

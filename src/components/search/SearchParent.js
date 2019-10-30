@@ -12,20 +12,31 @@ class SearchParent extends Component {
 		products: []
 	};
 	getData = (brand, productType) => {
-		APIManager.getAllMakeUp(brand, productType)
-		.then(products => {this.setState({
-			products: products
+		APIManager.getAllMakeUp(brand, productType).then(products => {
+			this.setState({
+				products: products
 			});
 		});
 	};
 
 	render() {
-		console.log(this.state.products)
+		console.log(this.state.products);
+		let results = <span>No Results Found</span>;
+		if (this.state.products.length > 0) {
+			results = this.state.products.map(product => (
+				<SearchCard
+					getData={this.getData}
+					key={product.id}
+					product={product}
+					{...this.props}
+				/>
+			));
+		}
 		return (
 			<>
 				<div className="container">
 					<div className="text-block">
-						<section className="wishListDash">
+						<section className="searchListDash">
 							<SearchList
 								getData={this.getData}
 								{...this.props}
@@ -33,15 +44,8 @@ class SearchParent extends Component {
 						</section>
 					</div>
 					<div className="text-block">
-						<section className="wishListDash">
-							{this.state.products.map(product => (
-								<SearchCard
-									getData={this.getData}
-									key={product.id}
-									product={product}
-									{...this.props}
-								/>
-							))}
+						<section className="apiDash">
+							{results}
 						</section>
 					</div>
 				</div>

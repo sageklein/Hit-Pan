@@ -14,13 +14,6 @@ class Dashboard extends Component {
 						<Link className="linkSearch" to="/searchParent">
 							Search Make Up
 						</Link>
-						<div className="imgParent">
-							<img
-								className="imgSpan"
-								src={require("../../images/splashPic.jpeg")}
-								alt=""
-							/>
-						</div>
 						<SearchMain {...this.props} />
 					</section>
 				</div>
@@ -30,13 +23,6 @@ class Dashboard extends Component {
 						<Link className="linkWish" to="WishParent">
 							View Your Wish List
 						</Link>
-						<div className="imgParent">
-							<img
-								className="imgSpan"
-								src={require("../../images/splashPic.jpeg")}
-								alt=""
-							/>
-						</div>
 						<WishMain {...this.props} />
 					</section>
 				</div>
@@ -46,13 +32,6 @@ class Dashboard extends Component {
 						<Link className="linkCollection" to="/collectionParent">
 							View Your Collection
 						</Link>
-						<div className="imgParent">
-							<img
-								className="imgSpan"
-								src={require("../../images/splashPic.jpeg")}
-								alt=""
-							/>
-						</div>
 						<CollectionMain {...this.props} />
 					</section>
 				</div>

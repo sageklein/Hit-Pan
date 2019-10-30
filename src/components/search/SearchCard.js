@@ -30,7 +30,7 @@ class SearchCard extends Component {
 			description: obj.description,
 			brand: obj.brand,
 			price: obj.price,
-			image_link: obj.image_link, 
+			image_link: obj.image_link,
 			productId: obj.productId
 		};
 		APIManager.saveProductToCollection(newObj)
@@ -42,7 +42,7 @@ class SearchCard extends Component {
 		console.log(this.props.product);
 		return (
 			<div className="card">
-				<span className="card-searchResults">
+				<div className="card-searchResults">
 					<h3 className="nameField">{this.props.product.name}</h3>
 					<h2 className="descriptionField">
 						{this.props.product.description}
@@ -50,10 +50,14 @@ class SearchCard extends Component {
 					<h1 className="descriptionField">
 						{this.props.product.price}
 					</h1>
-				</span>
-				<span className="imgSpan">
-					<img src={this.props.product.image_link} alt="" />
-				</span>
+				</div>
+				<div className="imgSpan">
+					<img
+						className="apiImage"
+						src={this.props.product.image_link}
+						alt=""
+					/>
+				</div>
 				<div className="btn">
 					<Button
 						className="button"
@@ -76,6 +80,5 @@ class SearchCard extends Component {
 		);
 	}
 }
-
 
 export default withRouter(SearchCard);

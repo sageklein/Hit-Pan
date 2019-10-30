@@ -1,12 +1,11 @@
 // Author: Sage Klein
 // Purpose of the File: Landing page that holds the login and registration data and returns the login and registration input fields.
-import React, { Component } from "react"
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import React, { Component } from "react";
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 import { withRouter } from "react-router-dom";
-import Register from "./Register"
+import Register from "./Register";
 import "./auth.css";
 import APIManager from "../../modules/APIManager";
-
 
 //Reactstrap Modal code from line 10 to 21
 class Login extends Component {
@@ -76,9 +75,9 @@ class Login extends Component {
 		return (
 			<div className="container">
 				<div className="authContainer">
-					<Button className="button" onClick={this.toggle}>
+					<button className="authButton" onClick={this.toggle}>
 						Login
-					</Button>
+					</button>
 
 					<Modal
 						isOpen={this.state.modal}
@@ -143,7 +142,8 @@ class Login extends Component {
 
 					{/* <Register /> calls the component Register and its contents from Register.js to display on the login page. */}
 
-						<Register className="button" />
+					<div></div>
+					<Register />
 				</div>
 			</div>
 		);
