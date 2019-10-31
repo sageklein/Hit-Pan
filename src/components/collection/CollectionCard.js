@@ -40,7 +40,7 @@ class CollectionCard extends Component {
 	};
 	render() {
 		return (
-			<div className="card">
+			<div className="collectCard">
 				<div className="card-content">
 					<img
 						src={this.props.product.image_link}
@@ -81,3 +81,4 @@ class CollectionCard extends Component {
 }
 
 export default withRouter(CollectionCard);
+// add comments to datbase
