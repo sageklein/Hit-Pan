@@ -6,7 +6,7 @@ import "react-rater/lib/react-rater.css";
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import APIManager from "../../modules/APIManager";
-import Comment from "./CommentForm";
+// import Comment from "./CommentForm";
 import "../collection/collection.css";
 
 class CollectionCard extends Component {
@@ -61,10 +61,10 @@ class CollectionCard extends Component {
 							onClick={evt => this.setCondition(evt)}
 						/>
 					</div>
-					<div>
+					{/* <div>
 						<h2>Add Notes:</h2>
 						<Comment />
-					</div>
+					</div> */}
 					<div className="btn">
 					<Button
 						className="button"
@@ -73,7 +73,7 @@ class CollectionCard extends Component {
 							this.handleDeleteCollect(this.state.product)
 						}
 					>
-						Remove Product
+						Delete
 					</Button>
 					</div>
 				</div>
