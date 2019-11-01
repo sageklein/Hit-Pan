@@ -1,0 +1,157 @@
+h1 {
+	display: block;
+	direction: center;
+	font-family: Tahoma;
+	font-size: 6px;
+	letter-spacing: 6px;
+}
+h2 {
+	direction: center;
+	font-family: Tahoma;
+	font-size: 10px;
+	letter-spacing: 6px;
+}
+
+h3 {
+	display: block;
+	direction: center;
+	font-family: Tahoma;
+	font-size: 15px;
+	letter-spacing: 6px;
+}
+
+
+/* COLLECTION CSS */
+
+.collection-block {
+	display: flex;
+	border-radius: 8px;
+	padding: 2%;
+	margin: 0.2em;
+	/* width: 880px; */
+}
+
+.cardProdPrice {
+	display: flex;
+	border-radius: 2px;
+	padding: 2%;
+	margin: 0.4em;
+}
+.rating {
+	display: flex;
+	border-radius: 2px;
+	padding: 2%;
+	margin: 0.4em;
+}
+.cardProdPrice {
+	display: flex;
+	border-radius: 2px;
+	padding: 2%;
+	margin: 0.4em;
+}
+.cardProdName  {
+	display: flex;
+	border-radius: 8px;
+	padding: 0%;
+	margin: 0.4em;
+}
+.card-content {
+	/* display: flex; */
+	flex-direction: column;
+	border-radius: 8px;
+	background-color: transparent !important;
+	padding: 2%;
+	margin: 0.2em;
+	width: 800px;
+}
+.collectCard {
+   	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	justify-content: center;
+	background-image: url(../../images/wishcollbg.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-family: Tahoma;
+	font-size: 20px;
+	letter-spacing: 4px;
+	height: 800px;
+	width: 100%; 
+}
+
+.btn {
+	display: flex;
+	align-content: center;
+	width: 200px;
+	height: 60px;
+}
+.btn-secondary
+.button {
+    color: #d563a3 !important;
+    cursor: pointer !important;
+    border-color: #d563a3 !important;
+}
+
+
+/* WISH CSS */
+
+.wishParent {
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    padding: 2%;
+    margin: .2em;
+    /* width: 880px; */
+}
+.card-content {
+    display: flex;
+    flex-direction: row;
+    border-radius: 8px;
+    background-color: transparent !important;
+    padding: 2%;
+    margin: .2em;
+    width: 800px;
+}
+.container
+ {
+    display: flex;
+    justify-content: center, space-around;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 0px;
+    margin: 50px auto;
+    width: 840px;
+}
+
+.prodImg {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    margin: 50px auto;
+    height: auto;
+    width: 200px;
+    padding: 1px 0px;
+}
+
+.wish-card{
+   	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	/* flex-direction: row; */
+	justify-content: center;
+	background-image: url(../../images/wishcollbg.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-family: Tahoma;
+	font-size: 20px;
+	letter-spacing: 4px;
+	height: 800px;
+	width: 100%; 
+}
+a,
+a:link,
+a:visited {
+    color: white;
+    text-decoration: none;
+}
+

@@ -28,29 +28,20 @@ h3 {
 	/* width: 880px; */
 }
 
-.cardProdPrice {
-	display: flex;
-	border-radius: 2px;
-	padding: 2%;
-	margin: 0.4em;
-}
-.rating{
-	display: flex;
-	border-radius: 2px;
-	padding: 2%;
-	margin: 0.4em;
-}
-.cardProdPrice {
-	display: flex;
-	border-radius: 2px;
-	padding: 2%;
-	margin: 0.4em;
-}
+.cardProdPrice,
+.rating,
 .cardProdName  {
 	display: flex;
 	border-radius: 8px;
-	padding: 0%;
+	padding: 1%;
 	margin: 0.4em;
+}
+.name,
+.price,
+.rate {
+	font-family: Tahoma;
+	font-size: 18px;
+	letter-spacing: 3px;
 }
 .card-content {
 	/* display: flex; */
@@ -61,13 +52,13 @@ h3 {
 	margin: 0.2em;
 	width: 800px;
 }
-.collectCard{
+.collectCard {
    	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	/* flex-direction: row; */
 	justify-content: center;
-	background-image: url(../../images/wishSplash.jpg);
+	background-image: url(../../images/wishcollbg.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	font-family: Tahoma;
@@ -98,16 +89,12 @@ a:visited {
 	width: 200px;
 	height: 60px;
 }
+
 .button {
-	background-color: Transparent !important;
-	color: #d563a3 !important;
-	padding: 15px 32px !important;
-	text-align: center !important;
-	cursor: pointer !important;
-	font-size: 15px !important;
-	letter-spacing: 4px !important;
-	outline: 0px;
-	border: 2px;
+	background-color: rgba(255, 255, 255, 0.068) !important;
+    color: #d563a3 !important;
+    cursor: pointer !important;
+    border-color: #d563a3 !important;
 }
 
 

@@ -48,13 +48,17 @@ class CollectionCard extends Component {
 						className="prodImg"
 					></img>
 					<div className="cardProdName">
-						<h2>Product Name: {this.props.product.name}</h2>
+						<h2 className="name">
+							Product Name: {this.props.product.name}
+						</h2>
 					</div>
 					<div className="cardProdPrice">
-						<h2>Product Price: ${this.props.product.price}</h2>
+						<h2 className="price">
+							Product Price: ${this.props.product.price}
+						</h2>
 					</div>
 					<div className="rating">
-						<h2>Rate Product:</h2>
+						<h2 className="rate">Rate Product:</h2>
 						<Rating
 							id="condition"
 							initialRating={this.props.product.rating}
@@ -66,15 +70,15 @@ class CollectionCard extends Component {
 						<Comment />
 					</div> */}
 					<div className="btn">
-					<Button
-						className="button"
-						type="button"
-						onClick={() =>
-							this.handleDeleteCollect(this.state.product)
-						}
-					>
-						Delete
-					</Button>
+						<Button
+							className="button"
+							type="button"
+							onClick={() =>
+								this.handleDeleteCollect(this.state.product)
+							}
+						>
+							Delete
+						</Button>
 					</div>
 				</div>
 			</div>
@@ -83,4 +87,4 @@ class CollectionCard extends Component {
 }
 
 export default withRouter(CollectionCard);
-// add comments to datbase
+

@@ -28,7 +28,7 @@ class WishCard extends Component {
 
 	render() {
 		return (
-			<div className="card">
+			<div className="wish-card">
 				<div className="card-content">
 					<img
 						src={this.props.product.image_link}
