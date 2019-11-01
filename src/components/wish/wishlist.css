@@ -60,29 +60,24 @@ h3 {
 }
 .btn {
 	display: flex;
-	justify-content: space-around;
 	align-content: center;
-	width: 180px;
-	height: 50px;
+	width: 200px;
+	height: 60px;
 }
+
 .button {
-	background-color: Transparent !important;
-	color: #d563a3 !important;
-	padding: 15px 32px !important;
-	text-align: center !important;
-	cursor: pointer !important;
-	font-size: 15px !important;
-	letter-spacing: 4px !important;
-	outline: 0px;
-	border: 2px;
+	background-color: rgba(255, 255, 255, 0.068) !important;
+    color: #d563a3 !important;
+    cursor: pointer !important;
+    border-color: #d563a3 !important;
 }
-.card{
+.wish-card{
    	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	/* flex-direction: row; */
 	justify-content: center;
-	background-image: url(../../images/wishSplash.jpg);
+	background-image: url(../../images/wishcollbg.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	font-family: Tahoma;
