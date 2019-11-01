@@ -1,5 +1,6 @@
 import { withRouter } from "react-router-dom";
 import React, { Component } from "react";
+import { Button } from "reactstrap";
 import APIManager from "../../modules/APIManager";
 
 class SearchCard extends Component {
@@ -58,14 +59,14 @@ class SearchCard extends Component {
 					/>
 				</div>
 				<div className="btn">
-					<button
+					<Button
 						className="button"
 						type="button"
 						onClick={() => this.handleSaveWish(this.props.product)}
 					>
 						Save to Wish List
-					</button>
-					<button
+					</Button>
+					<Button
 						className="button"
 						type="button"
 						onClick={() =>
@@ -73,7 +74,7 @@ class SearchCard extends Component {
 						}
 					>
 						Save to Collection
-					</button>
+					</Button>
 				</div>
 			</div>
 		);

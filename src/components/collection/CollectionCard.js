@@ -1,13 +1,13 @@
 // Author: Sage Klein
 // Purpose of the file to display individual make-up items owned by the user
 import Rating from "react-rating";
+import { Button } from "reactstrap";
 import "react-rater/lib/react-rater.css";
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import APIManager from "../../modules/APIManager";
-import Comment from "./CommentForm"
+import Comment from "./CommentForm";
 import "../collection/collection.css";
-
 
 class CollectionCard extends Component {
 	state = {
@@ -35,12 +35,12 @@ class CollectionCard extends Component {
 		APIManager.patch(
 			"collections",
 			collections,
-			this.props.product.id,
+			this.props.product.id
 		).then(response => response);
 	};
 	render() {
 		return (
-			<div className="card">
+			<div className="collectCard">
 				<div className="card-content">
 					<img
 						src={this.props.product.image_link}
@@ -60,12 +60,13 @@ class CollectionCard extends Component {
 							initialRating={this.props.product.rating}
 							onClick={evt => this.setCondition(evt)}
 						/>
-					</div>{" "}
+					</div>
 					<div>
 						<h2>Add Notes:</h2>
 						<Comment />
 					</div>
-					<button
+					<div className="btn">
+					<Button
 						className="button"
 						type="button"
 						onClick={() =>
@@ -73,7 +74,8 @@ class CollectionCard extends Component {
 						}
 					>
 						Remove Product
-					</button>
+					</Button>
+					</div>
 				</div>
 			</div>
 		);
@@ -81,3 +83,4 @@ class CollectionCard extends Component {
 }
 
 export default withRouter(CollectionCard);
+// add comments to datbase

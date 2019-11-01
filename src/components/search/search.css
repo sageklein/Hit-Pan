@@ -6,12 +6,29 @@
 	display: flex;
 	align-items: flex-start;
 	flex-direction: column;
-	background-color: rgba(0, 0, 0, 0.5);
+	background-color: white;
 	padding: 2%;
 	margin: 0.2em;
 	width: 800px;
 }
-
+.btn {
+	display: flex;
+	justify-content: space-around;
+	align-content: center;
+	width: 180px;
+	height: 50px;
+}
+.button {
+	background-color: Transparent !important;
+	color: #d563a3 !important;
+	padding: 15px 32px !important;
+	text-align: center !important;
+	cursor: pointer !important;
+	font-size: 15px !important;
+	letter-spacing: 4px !important;
+	outline: 0px;
+	border: 2px;
+}
 .nameField {
 	display: flex;
 	width: 780px;

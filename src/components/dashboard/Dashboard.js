@@ -1,13 +1,17 @@
 import React, { Component } from "react";
-import { withRouter, Link } from "react-router-dom";
+import { withRouter, Link, } from "react-router-dom";
 import WishMain from "../wish/WishMain";
 import CollectionMain from "../collection/CollectionMain";
 import SearchMain from "../search/SearchMain";
 import "./dashboard.css";
 
+
+
 class Dashboard extends Component {
+
     render() {
 		return (
+			<div className="background">
 			<div className="container">
 				<div className="text-block">
 					<section className="searchListDash">
@@ -35,6 +39,7 @@ class Dashboard extends Component {
 						<CollectionMain {...this.props} />
 					</section>
 				</div>
+			</div>
 			</div>
 		);
 	}

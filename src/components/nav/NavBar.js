@@ -15,7 +15,7 @@ class NavBar extends Component {
 	render() {
 		return (
 			<div className="navLinks">
-				<nav className="navbar navbar-light bg-light justify-content-between">
+				<nav className="navbar justify-content-between">
 					<Link className="navbar-brand" to="/dashboard">
 						Hit Pan
 					</Link>

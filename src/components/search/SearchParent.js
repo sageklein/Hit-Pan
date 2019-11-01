@@ -9,12 +9,14 @@ import "./search.css";
 
 class SearchParent extends Component {
 	state = {
-		products: []
+		products: [],
+		hasSearched: false
 	};
 	getData = (brand, productType) => {
 		APIManager.getAllMakeUp(brand, productType).then(products => {
 			this.setState({
-				products: products
+				products: products,
+				hasSearched: true
 			});
 		});
 	};
@@ -22,7 +24,7 @@ class SearchParent extends Component {
 	render() {
 		console.log(this.state.products);
 		let results = <span>No Results Found</span>;
-		if (this.state.products.length > 0) {
+		if (this.state.products.length > 0 || !this.state.hasSearched) {
 			results = this.state.products.map(product => (
 				<SearchCard
 					getData={this.getData}
