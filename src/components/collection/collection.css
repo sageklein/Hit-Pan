@@ -152,7 +152,6 @@ a:visited {
 label {
     color: #ccc;
     font-size: 15px;
-    position: absolute;
     pointer-events: none;
     left: 5px;
     top: 10px;

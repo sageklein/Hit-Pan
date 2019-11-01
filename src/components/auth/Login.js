@@ -50,8 +50,6 @@ class Login extends Component {
 				window.alert("Please enter email");
 			} else if (this.state.password === "") {
 				window.alert("Please enter password");
-			} else if (this.state.name === "") {
-				window.alert("Please enter your name");
 			} else if (singleUser) {
 				sessionStorage.setItem("userId", singleUser.id);
 				sessionStorage.setItem("email", this.state.email);
@@ -91,17 +89,6 @@ class Login extends Component {
 							<form onSubmit={this.handleLogin}>
 								<fieldset>
 									<div className="formgrid">
-										<label htmlFor="inputEmail">Name</label>
-										<br></br>
-										<input
-											onChange={this.handleFieldChange}
-											type="text"
-											id="name"
-											placeholder="Name"
-											required=""
-											autoFocus=""
-										/>
-										<br></br>
 										<label htmlFor="inputEmail">
 											Email address
 										</label>
