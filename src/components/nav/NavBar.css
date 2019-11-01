@@ -1,8 +1,8 @@
 .navbar-logout, .navbar-brand {
     font-family: Tahoma;
-    font-size: 15px;
+    font-size: 20px;
     letter-spacing: 4px;
-    color: black !important;
+    color: #d563a3  !important;
 }
 a,
 a:link,
@@ -11,5 +11,6 @@ a:visited {
 	text-decoration: none !important;
 }
 .navbar-brand {
-    color: black !important;
+    color: #d563a3 !important;
+
 }
