@@ -41,15 +41,15 @@ class SearchCard extends Component {
 	render() {
 		console.log(this.props.product);
 		return (
-			<div>
+			<div className="card">
 				<div className="card-searchResults">
-					<h3 className="nameField">{this.props.product.name}</h3>
-					<h2 className="descriptionField">
-						{this.props.product.description}
-					</h2>
-					<h1 className="descriptionField">
+					<div className="nameField">{this.props.product.name}</div>
+					<div className="descriptionField">
+				{this.props.product.description}
+					</div>
+					<div className="priceField">
 						{this.props.product.price}
-					</h1>
+					</div>
 				</div>
 				<div className="imgSpan">
 					<img
