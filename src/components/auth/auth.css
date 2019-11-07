@@ -25,7 +25,17 @@ body {
 	height: 650px;
 	width: 980px;
 }
-
+.inputPassword,
+.modal-body,
+.modal-footer,
+.modalHeader,
+.inputEmail.com,
+.formgrid {
+	background-color: #E5F4FA;
+	font-family: Tahoma;
+	font-size: 18px;
+	letter-spacing: 2px;
+}
 a,
 a:link,
 a:visited {

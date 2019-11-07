@@ -7,7 +7,7 @@ import "./NavBar.css";
 class NavBar extends Component {
 	isAuthenticated = () => sessionStorage.getItem("activeUser") !== null;
 
-	logOut = event => {
+	logOut = () => {
 		this.props.clearUser();
 		this.props.history.push("/login");
 	};
@@ -20,14 +20,14 @@ class NavBar extends Component {
 						Hit Pan
 					</Link>
 					<form className="form-inline">
-						<Button
-							className="navbar-logout"
-							color="bg-light"
-							type="submit"
-							onClick={this.logOut}
-						>
-							Logout
-						</Button>
+							<Button
+								className="navbar-logout"
+								color="bg-light"
+								type="submit"
+								onClick={this.logOut}
+							>
+								Logout
+							</Button>
 					</form>
 				</nav>
 			</div>
