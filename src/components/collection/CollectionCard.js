@@ -57,6 +57,15 @@ class CollectionCard extends Component {
 							Product Price: ${this.props.product.price}
 						</h2>
 					</div>
+					<Button 
+						className="button"
+						type="button"
+						onClick={() =>
+							this.handleDeleteCollect(this.state.product)
+						}
+					>
+						Delete
+					</Button>
 					<div className="rating">
 						<h2 className="rate">Rate Product:</h2>
 						<Rating
@@ -72,27 +81,6 @@ class CollectionCard extends Component {
 						product={this.props.product}
 						{...this.props}
 					/>
-					<Button
-						type="button"
-						onClick={() => {
-							this.props.history.push(
-								`/collections/${this.props.id}/edit`
-							);
-						}}
-					>
-						Update
-					</Button>
-					<div className="btn">
-						<Button
-							className="button"
-							type="button"
-							onClick={() =>
-								this.handleDeleteCollect(this.state.product)
-							}
-						>
-							Delete
-						</Button>
-					</div>
 				</div>
 			</div>
 		);
