@@ -1,8 +1,8 @@
-body {
+/* body {
 	background-image: url("../../images/bg2.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
-}
+} */
 .authButton {
 	background-color: Transparent !important;
 	color: #d563a3;
@@ -19,7 +19,7 @@ body {
 	display: flex;
 	align-self: center;
 	justify-content: center;
-	background-image: url(../../images/searchBack2.jpg);
+	background-image: url(../../images/splash.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 650px;

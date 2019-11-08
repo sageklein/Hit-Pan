@@ -6,7 +6,7 @@ import "react-rater/lib/react-rater.css";
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import APIManager from "../../modules/APIManager";
-// import Comment from "./CommentForm";
+import CollectionNotes from "../collection/CollectionNotes";
 import "../collection/collection.css";
 
 class CollectionCard extends Component {
@@ -65,10 +65,23 @@ class CollectionCard extends Component {
 							onClick={evt => this.setCondition(evt)}
 						/>
 					</div>
-					{/* <div>
-						<h2>Add Notes:</h2>
-						<Comment />
-					</div> */}
+					<CollectionNotes
+						user={this.props.user}
+						getData={this.getData}
+						key={this.props.product.id}
+						product={this.props.product}
+						{...this.props}
+					/>
+					<Button
+						type="button"
+						onClick={() => {
+							this.props.history.push(
+								`/collections/${this.props.id}/edit`
+							);
+						}}
+					>
+						Update
+					</Button>
 					<div className="btn">
 						<Button
 							className="button"
