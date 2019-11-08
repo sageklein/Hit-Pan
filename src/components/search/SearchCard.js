@@ -31,7 +31,8 @@ class SearchCard extends Component {
 			brand: obj.brand,
 			price: obj.price,
 			image_link: obj.image_link,
-			productId: obj.productId
+			productId: obj.productId,
+			note: ""
 		};
 		APIManager.saveProductToCollection(newObj)
 			.then(response => response)

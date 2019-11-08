@@ -82,7 +82,7 @@ class Login extends Component {
 						toggle={this.toggle}
 						className={this.props.className}
 					>
-						<ModalHeader toggle={this.toggle} close={closeBtn}>
+						<ModalHeader className="modalHeader" toggle={this.toggle} close={closeBtn}>
 							Please Sign In
 						</ModalHeader>
 						<ModalBody>
@@ -118,10 +118,10 @@ class Login extends Component {
 							</form>
 						</ModalBody>
 						<ModalFooter>
-							<Button className="add" onClick={this.handleLogin}>
+							<Button className="button" onClick={this.handleLogin}>
 								Sign In
 							</Button>{" "}
-							<Button className="close" onClick={this.toggle}>
+							<Button className="button" onClick={this.toggle}>
 								Cancel
 							</Button>
 						</ModalFooter>
