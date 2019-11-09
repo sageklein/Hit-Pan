@@ -5,14 +5,15 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./NavBar.css";
 
 class NavBar extends Component {
-	isAuthenticated = () => sessionStorage.getItem("activeUser") !== null;
 
 	logOut = () => {
 		this.props.clearUser();
 		this.props.history.push("/login");
+		console.log("logout")
 	};
 
 	render() {
+		console.log("is Authenticated", this.props.isAuthenticated())
 		return (
 			<div className="navLinks">
 				<nav className="navbar justify-content-between">
@@ -24,13 +25,15 @@ class NavBar extends Component {
 						/>
 					</Link>
 					<form className="form-inline">
-						<Link className="logoLink" to="/">
-							<CardImg
-								className="logout"
-								alt="Hit Pan"
-								src={require("../../images/logout.png")}
-							/>
-						</Link>
+						{this.props.isAuthenticated() ? (
+
+								<CardImg
+									className="logout"
+									alt="Hit Pan"
+									src={require("../../images/logout.png")}
+									onClick={this.logOut}
+								/>
+						) : null}
 					</form>
 				</nav>
 			</div>
