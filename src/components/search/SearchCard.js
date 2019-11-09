@@ -40,7 +40,6 @@ class SearchCard extends Component {
 			.then(() => this.props.history.push("/collectionParent"));
 	};
 	render() {
-		console.log(this.props.product);
 		return (
 			<div className="card">
 				<div className="card-searchResults">

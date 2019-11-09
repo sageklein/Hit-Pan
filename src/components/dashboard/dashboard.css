@@ -1,9 +1,5 @@
 .text-block {
-    /* border-radius: 8px; */
-    /* display: flex; */
-    /* flex-direction: row; */
     padding: .8%;
-    /* margin: 0.2em; */
     width: 950px;
 }
 .linkSearch .linkWish .linkCollection {
@@ -11,10 +7,20 @@
 	justify-content: flex-start;
 	text-shadow : 5px 10px 2px #ff0000, -3px 6px 5px #0000ff !important;
 }
-body {
-	background-image: url("../../images/bg2.jpg");
+/* body {
+	background-color: black;
+} */
+/* body {
+	background-color: black;
+	background-image: url("../../images/bgmaybe.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
+} */
+.searchListDash,
+.wishListDash, 
+.collectionListDash {
+  opacity: 0.75;
+  border: 2px solid white;
 }
 .searchListDash {
 	display: flex;
@@ -22,14 +28,11 @@ body {
 	justify-content: space-between;
 	flex-direction: row;
 	justify-content: center;
-	background-image: url(../../images/sesrchbg3.jpg);
+	background-image: url(../../images/bwsearch.jpeg);
+	background-size: 1100px, auto;
 	background-repeat: no-repeat;
-	background-size: cover;
-	font-family: Tahoma;
-	font-size: 20px;
-	color: black;
-	letter-spacing: 4px;
-	height: 290px;
+	background-position: center;
+	height: 280px;
 	width: 100%;
 }
 .wishListDash {
@@ -38,12 +41,10 @@ body {
 	justify-content: space-between;
 	flex-direction: row;
 	justify-content: center;
-	background-image: url(../../images/yellow.jpg);
+	background-image: url(../../images/lips.jpeg);
+	background-size: 950px, auto;
 	background-repeat: no-repeat;
-	background-size: cover;
-	font-family: Tahoma;
-	font-size: 20px;
-	letter-spacing: 4px;
+	background-position: center;
 	height: 290px;
 	width: 100%;
 }
@@ -53,12 +54,10 @@ body {
 	justify-content: space-between;
 	flex-direction: row;
 	justify-content: center;
-	background-image: url(../../images/pink.jpg);
+	background-image: url(../../images/shadow.jpg);
+	background-size: 950px, auto;
 	background-repeat: no-repeat;
-	background-size: cover;
-	font-family: Tahoma;
-	font-size: 20px;
-	letter-spacing: 4px;
+	background-position: center;
 	height: 290px;
 	width: 100%;
 }
@@ -66,22 +65,21 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	/* flex-direction: row; */
 	justify-content: center;
-	background-image: url(../../images/api.jpg);
+	background-image: url(../../images/purple.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
-	font-family: Tahoma;
-	font-size: 20px;
-	letter-spacing: 4px;
 	height: 800px;
 	width: 100%;
 }
 a,
 a:link,
 a:visited {
-	color: black;
+	color: white !important;
 	text-decoration: none !important;
+	font-family: Tahoma !important;
+	font-size: 25px !important;
+	letter-spacing: 4px !important;
 }
 
 .btn {

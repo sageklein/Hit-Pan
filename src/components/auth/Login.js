@@ -55,7 +55,6 @@ class Login extends Component {
 				sessionStorage.setItem("email", this.state.email);
 				sessionStorage.setItem("name", this.state.name);
 				this.setUser(singleUser.id);
-				console.log("Navigating to Dashboard");
 				this.props.history.push("/dashboard");
 			} else {
 				window.alert("Credentials do not match");
@@ -118,10 +117,10 @@ class Login extends Component {
 							</form>
 						</ModalBody>
 						<ModalFooter>
-							<Button className="button" onClick={this.handleLogin}>
+							<Button className="saveButton" onClick={this.handleLogin}>
 								Sign In
 							</Button>{" "}
-							<Button className="button" onClick={this.toggle}>
+							<Button className="cancelButton" onClick={this.toggle}>
 								Cancel
 							</Button>
 						</ModalFooter>

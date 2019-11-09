@@ -5,7 +5,6 @@ import React, { Component } from "react";
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 import APIManager from "../../modules/APIManager";
 import { withRouter } from "react-router-dom";
-// import ApplicationViews from "../ApplicationViews"
 import "./auth.css";
 
 //Reactstrap Modal code from line 10 to 21

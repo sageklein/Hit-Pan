@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { withRouter, Link } from "react-router-dom";
-import { Button } from "reactstrap";
+import { CardImg } from "reactstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./NavBar.css";
 
@@ -16,18 +16,21 @@ class NavBar extends Component {
 		return (
 			<div className="navLinks">
 				<nav className="navbar justify-content-between">
-					<Link className="navbar-brand" to="/dashboard">
-						Hit Pan
+					<Link className="logoLink" to="/Dashboard">
+						<CardImg
+							className="logo"
+							alt="Hit Pan"
+							src={require("../../images/logo.png")}
+						/>
 					</Link>
 					<form className="form-inline">
-							<Button
-								className="navbar-logout"
-								color="bg-light"
-								type="submit"
-								onClick={this.logOut}
-							>
-								Logout
-							</Button>
+						<Link className="logoLink" to="/">
+							<CardImg
+								className="logout"
+								alt="Hit Pan"
+								src={require("../../images/logout.png")}
+							/>
+						</Link>
 					</form>
 				</nav>
 			</div>

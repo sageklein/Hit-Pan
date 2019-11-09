@@ -57,7 +57,7 @@ class CollectionCard extends Component {
 							Product Price: ${this.props.product.price}
 						</h2>
 					</div>
-					<Button 
+					<Button
 						className="button"
 						type="button"
 						onClick={() =>
@@ -66,6 +66,14 @@ class CollectionCard extends Component {
 					>
 						Delete
 					</Button>
+
+					<CollectionNotes
+						user={this.props.user}
+						getData={this.getData}
+						key={this.props.product.id}
+						product={this.props.product}
+						{...this.props}
+					/>
 					<div className="rating">
 						<h2 className="rate">Rate Product:</h2>
 						<Rating
@@ -74,13 +82,6 @@ class CollectionCard extends Component {
 							onClick={evt => this.setCondition(evt)}
 						/>
 					</div>
-					<CollectionNotes
-						user={this.props.user}
-						getData={this.getData}
-						key={this.props.product.id}
-						product={this.props.product}
-						{...this.props}
-					/>
 				</div>
 			</div>
 		);
