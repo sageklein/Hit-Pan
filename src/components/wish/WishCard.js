@@ -32,10 +32,19 @@ class WishCard extends Component {
 				<div className="card-content">
 					<img
 						src={this.props.product.image_link}
-						className="prodImg"
 						alt=""
+						className="prodImg"
 					></img>
-					<h3>{this.props.product.name}</h3>
+					<div className="cardProdName">
+						<h2 className="name">
+							Product Name: {this.props.product.name}
+						</h2>
+					</div>
+					<div className="cardProdPrice">
+						<h2 className="price">
+							Product Price: ${this.props.product.price}
+						</h2>
+					</div>
 					<Button
 						className="button"
 						type="button"

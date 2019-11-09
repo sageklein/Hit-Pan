@@ -16,7 +16,13 @@ class Dashboard extends Component {
 					<div className="text-block">
 						<section className="searchListDash">
 							<Link className="linkSearch" to="/searchParent">
-								Search Make Up
+								<div className="textContainer">
+									<h3>
+										{" "}
+										<span>Search</span>
+									</h3>
+								</div>
+								{/* Search Make Up */}
 							</Link>
 							<SearchMain {...this.props} />
 						</section>
@@ -25,7 +31,9 @@ class Dashboard extends Component {
 					<div className="text-block">
 						<section className="wishListDash img:hover">
 							<Link className="linkSearch" to="WishParent">
-								View Your Wish List
+								<h3>
+									<span>View Your Wish List</span>
+								</h3>
 							</Link>
 							<WishMain {...this.props} />
 						</section>
@@ -33,9 +41,10 @@ class Dashboard extends Component {
 
 					<div className="text-block">
 						<section className="collectionListDash">
-
 							<Link className="linkSearch" to="/collectionParent">
-								View Your Collection
+								<h3>
+									<span>View Your Collection</span>
+								</h3>
 							</Link>
 							<CollectionMain {...this.props} />
 						</section>

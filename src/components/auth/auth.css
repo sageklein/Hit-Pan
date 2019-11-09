@@ -14,9 +14,9 @@ body {
 .cancelButton,
 .saveButton {
 	background-color: rgb(101, 89, 154) !important;;
-    color: black !important;
+    color: white !important;
     cursor: pointer !important;
-    border-color: black !important;
+    border-color: white !important;
 }
 
 .authContainer {
@@ -26,7 +26,7 @@ body {
 	background-image: url(../../images/splash.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
-	height: 650px;
+	height: 720px;
 	width: 970px;
 }
 .inputPassword,

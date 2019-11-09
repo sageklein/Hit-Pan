@@ -2,57 +2,55 @@
 	border-bottom: 1px solid #f48fb1;
 	box-shadow: 0 1px 0 0 #f48fb1;
 }
+.container
 .card-searchResults {
 	display: flex;
 	align-items: flex-start;
 	flex-direction: column;
 	justify-content: space-between;
-	/* background-color: white; */
+	background-color: transparent;
 	justify-content: space-between;
-	/* margin: 0.2em;
-	width: 800px; */
+	margin: 0.2em;
 }
 body {
-	background-color: black;
 	background-image: url("../../images/bgmaybe.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 }
-.card {
+.makeup-card {
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
+	flex-direction: column;
 	justify-content: center;
-	background-image: url(../../images/api.jpg);
+	background-image: url(../../images/purple.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
+	color: white;
 	font-family: Tahoma;
 	font-size: 20px;
 	letter-spacing: 4px;
+	padding: 2em;
 	height: 800px;
 	width: 100%;
 }
 
-.btn {
+.save-btn {
 	display: flex;
+	flex-direction: row;
 	justify-content: space-around;
 	align-content: center;
 	width: 180px;
 	height: 50px;
 }
-.save-btn
 .btn-secondary
 .button {
-	background-color: rgba(255, 255, 255, 0.068) !important;
-	color: #d563a3 !important;
-	padding: 15px 32px !important;
-	text-align: center !important;
-	cursor: pointer !important;
-	font-size: 15px !important;
-	letter-spacing: 4px !important;
-	outline: 0px;
-	border: 2px;
-	border-color: #d563a3;
+    background-color: black; 
+    opacity: .8 !important;
+    color: white !important;
+    cursor: pointer !important;
+    border-color: white !important;
+    width: 100px;
+	height: 60px;
 }
 .nameField {
 	display: flex;
@@ -62,14 +60,7 @@ body {
 	font-size: 16px;
 	letter-spacing: 4px;
 }
-.descriptionField {
-	display: flex;
-	width: 780px;
-	display: block;
-	font-family: Tahoma;
-	font-size: 14px;
-	letter-spacing: 3px;
-}
+.descriptionField 
 .priceField {
 	display: flex;
 	width: 780px;
@@ -85,7 +76,13 @@ body {
 	width: 20em;
 	padding: 0px 20px;
 }
-
+.noResults {
+	color: white;
+	display: block;
+	font-family: Tahoma;
+	font-size: 22px;
+	letter-spacing: 3px;
+}
 .form-control {
 	display: flex;
 	font-family: Tahoma;
