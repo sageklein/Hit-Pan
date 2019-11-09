@@ -23,7 +23,7 @@ class Dashboard extends Component {
 					</div>
 
 					<div className="text-block">
-						<section className="wishListDash">
+						<section className="wishListDash img:hover">
 							<Link className="linkSearch" to="WishParent">
 								View Your Wish List
 							</Link>
@@ -33,6 +33,7 @@ class Dashboard extends Component {
 
 					<div className="text-block">
 						<section className="collectionListDash">
+
 							<Link className="linkSearch" to="/collectionParent">
 								View Your Collection
 							</Link>

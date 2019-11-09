@@ -11,7 +11,6 @@ class CollectionParent extends Component {
 		collections: []
 	};
 	getData = () => {
-		console.log(sessionStorage.getItem("userId"));
 		APIManager.getAll("collections", sessionStorage.getItem("userId")).then(
 			collection => {
 				this.setState({
@@ -24,11 +23,6 @@ class CollectionParent extends Component {
 	componentDidMount() {
 		this.getData();
 	}
-
-	// newCollection = () => {
-	// 	this.props.getData();
-	// };
-
 	render() {
 		return (
 			<>

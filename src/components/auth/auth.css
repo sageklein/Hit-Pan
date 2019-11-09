@@ -1,8 +1,6 @@
-/* body {
-	background-image: url("../../images/bg2.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
-} */
+body {
+	background-color: black !important;
+}
 .authButton {
 	background-color: Transparent !important;
 	color: #d563a3;
@@ -11,8 +9,14 @@
 	cursor: pointer;
 	font-size: 20px !important;
 	letter-spacing: 4px !important;
-	outline: 0px;
 	border: 0px;
+}
+.cancelButton,
+.saveButton {
+	background-color: rgb(101, 89, 154) !important;;
+    color: black !important;
+    cursor: pointer !important;
+    border-color: black !important;
 }
 
 .authContainer {
@@ -23,7 +27,7 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 650px;
-	width: 980px;
+	width: 970px;
 }
 .inputPassword,
 .modal-body,
@@ -31,7 +35,7 @@
 .modalHeader,
 .inputEmail.com,
 .formgrid {
-	background-color: #E5F4FA;
+	background-color: rgb(67, 57, 97);
 	font-family: Tahoma;
 	font-size: 18px;
 	letter-spacing: 2px;

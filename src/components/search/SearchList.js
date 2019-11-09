@@ -23,7 +23,6 @@ class SearchList extends Component {
 
 
 	search = () => {
-		console.log(this.state.brand, this.state.productType)
 		let brand = this.state.brand
 		let productType = this.state.productType
 		this.props.getData(brand, productType)

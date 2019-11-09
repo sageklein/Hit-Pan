@@ -1,14 +1,20 @@
 .navbar-logout, .navbar-brand {
     font-family: Tahoma;
-    font-size: 20px;
+    font-size: 18px;
     letter-spacing: 4px;
     color: #d563a3  !important;
 }
-a,
-a:link,
-a:visited {
-	color: #7F7F7F;
-	text-decoration: none !important;
+.logo {
+    display: inline-block;
+    vertical-align: top;
+    width: auto;
+    height: 100px;
+}
+.logout {
+    display: inline-block;
+    vertical-align: top, left;
+    width: auto;
+    height: 100px;
 }
 .navbar-brand {
     color: #d563a3 !important;

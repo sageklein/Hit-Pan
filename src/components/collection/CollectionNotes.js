@@ -23,11 +23,9 @@ class CollectionNotes extends Component {
 	constructNewNote = note => {
 		note.preventDefault();
 		this.setState({ loadingStatus: true });
-		let userId = parseInt(sessionStorage.getItem("credentials"));
 		const newNote = {
 			id: this.state.id,
 			note: this.state.note,
-			// userId: userId
 		};
 		APIManager.put("collections", newNote, newNote.id).then(() =>
 			this.props.history.push("/collectionParent")
@@ -35,17 +33,12 @@ class CollectionNotes extends Component {
 	};
 
 	componentDidMount() {
-		// APIManager.get("collection", this.props.id).then(
-        //     collection => {
-        //     console.log(collection) 
 				this.setState({
 					note: this.props.product.note,
 					id: this.props.product.id,
 					loadingStatus: false
 				});
 			}
-		// );
-	// }
 
 	render() {
 		return (
