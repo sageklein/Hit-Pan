@@ -68,8 +68,12 @@ class Login extends Component {
 			<button className="close" onClick={this.toggle}>
 				&times;
 			</button>
+		
 		);
+		const styles = <style>body {'{background-image: none !important;}'}</style>
 		return (
+			<>
+			{styles}
 			<div className="container">
 				<div className="authContainer">
 					<button className="authButton" onClick={this.toggle}>
@@ -132,6 +136,7 @@ class Login extends Component {
 					<Register />
 				</div>
 			</div>
+			</>
 		);
 	}
 }

@@ -2,21 +2,17 @@
     font-family: Tahoma;
     font-size: 18px;
     letter-spacing: 4px;
-    color: #d563a3  !important;
+    border: 0;
 }
 .logo {
     display: inline-block;
     vertical-align: top;
     width: auto;
-    height: 100px;
+    height: 70px;
 }
 .logout {
     display: inline-block;
     vertical-align: top, left;
     width: auto;
-    height: 100px;
-}
-.navbar-brand {
-    color: #d563a3 !important;
-
+    height: 70px;
 }

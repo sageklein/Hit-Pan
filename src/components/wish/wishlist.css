@@ -1,33 +1,15 @@
-h1 {
-    display: block;
-    direction: center;
-    font-family: Tahoma;
-    font-size: 8px;
-    letter-spacing: 6px;
-
+body {
+	background-image: url("../../images/bgmaybe.jpg");
+	background-repeat: no-repeat;
+    background-size: center;
+    background-position: bottom; 
 }
-h2 {
-    direction: center;
-    font-family: Tahoma;
-    font-size: 10px;
-    letter-spacing: 6px;
-}
-
-h3 {
-    display: block;
-    direction: center;
-    font-family: Tahoma;
-    font-size: 15px;
-    letter-spacing: 6px;
-}
-
 .wishParent {
     display: flex;
     flex-direction: column;
     border-radius: 8px;
     padding: 2%;
     margin: .2em;
-    /* width: 880px; */
 }
 .card-content {
     display: flex;
@@ -65,19 +47,15 @@ h3 {
 	height: 60px;
 }
 
-.button {
-	background-color: rgba(255, 255, 255, 0.068) !important;
-    color: #d563a3 !important;
-    cursor: pointer !important;
-    border-color: #d563a3 !important;
-}
 .wish-card{
-   	display: flex;
+    display: flex;
+    color: white;
 	align-items: center;
 	justify-content: space-between;
-	/* flex-direction: row; */
 	justify-content: center;
-	background-image: url(../../images/wishcollbg.jpg);
+    background-image: url(../../images/perfect.jpeg);
+    opacity: 0.8;
+    border: 1px solid white;
 	background-repeat: no-repeat;
 	background-size: cover;
 	font-family: Tahoma;

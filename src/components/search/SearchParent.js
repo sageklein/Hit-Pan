@@ -23,7 +23,7 @@ class SearchParent extends Component {
 
 	render() {
 		console.log(this.state.products);
-		let results = <span>No Results Found</span>;
+		let results = <span className="noResults">No Results Found</span>;
 		if (this.state.products.length > 0 || !this.state.hasSearched) {
 			results = this.state.products.map(product => (
 				<SearchCard

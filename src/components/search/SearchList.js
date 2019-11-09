@@ -21,13 +21,11 @@ class SearchList extends Component {
 		this.setState(stateToChange);
 	};
 
-
 	search = () => {
-		let brand = this.state.brand
-		let productType = this.state.productType
-		this.props.getData(brand, productType)
-
-	}
+		let brand = this.state.brand;
+		let productType = this.state.productType;
+		this.props.getData(brand, productType);
+	};
 
 	render() {
 		return (
@@ -42,12 +40,14 @@ class SearchList extends Component {
 					onChange={this.handleFieldChange}
 				>
 					<option>Choose Brand</option>
-					<option value="Alva">Alva</option>
-					<option value="W3ll People">W3ll People</option>
-					<option value="Pure Anand">Pure Anand</option>
-					<option value="Penny Lane Organics">
-						Penny Lane Organics
+					<option
+						value="colourpop"
+					>
+						Colourpop
 					</option>
+					<option value="e.l.f.">e.l.f.</option>
+					<option value="maybelline">Maybelline</option>
+					<option value="smashbox">Smashbox</option>
 				</select>
 				<Input
 					className="form-control"
@@ -62,7 +62,6 @@ class SearchList extends Component {
 					type="submit"
 					required
 					onClick={this.search}
-					
 				>
 					Search
 				</Button>

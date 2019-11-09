@@ -1,5 +1,5 @@
 .text-block {
-    padding: .8%;
+    padding: .5%;
     width: 950px;
 }
 .linkSearch .linkWish .linkCollection {
@@ -7,15 +7,6 @@
 	justify-content: flex-start;
 	text-shadow : 5px 10px 2px #ff0000, -3px 6px 5px #0000ff !important;
 }
-/* body {
-	background-color: black;
-} */
-/* body {
-	background-color: black;
-	background-image: url("../../images/bgmaybe.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
-} */
 .searchListDash,
 .wishListDash, 
 .collectionListDash {
@@ -61,44 +52,37 @@
 	height: 290px;
 	width: 100%;
 }
+
 .apiDash {
 	display: flex;
+	padding: 4%;
+    width: 950px;
+	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
 	justify-content: center;
 	background-image: url(../../images/purple.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
-	height: 800px;
+	min-height: 900px;
 	width: 100%;
 }
-a,
-a:link,
-a:visited {
-	color: white !important;
-	text-decoration: none !important;
-	font-family: Tahoma !important;
-	font-size: 25px !important;
-	letter-spacing: 4px !important;
+
+/* link */
+
+h3 {
+  font-family: "Tahoma";
+  color: #202020;
+  text-transform: uppercase;
+  letter-spacing: 4px;
 }
 
-.btn {
-	display: flex;
-	justify-content: space-around;
-	align-content: center;
-	width: 180px;
-	height: 50px;
-}
-.btn-secondary
-.button {
-	background-color: rgba(255, 255, 255, 0.068) !important;
-	color: #d563a3 !important;
-	padding: 15px 32px !important;
-	text-align: center !important;
-	cursor: pointer !important;
-	font-size: 15px !important;
-	letter-spacing: 4px !important;
-	outline: 0px;
-	border: 2px;
-	border-color: #d563a3;
+h3 span {
+  display: block;
+  margin: 11px 0 17px 0;
+  font-size: 30px;
+  line-height: 30px;
+  color: white;
+  text-shadow: 0 13.36px 8.896px #dedede,0 -1px 1px #fff;
+  letter-spacing: 4px;
 }
