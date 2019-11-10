@@ -30,7 +30,7 @@ body {
 	font-size: 20px;
 	letter-spacing: 4px;
 	padding: 2em;
-	height: 800px;
+	min-height: 800px;
 	width: 100%;
 }
 
@@ -39,8 +39,10 @@ body {
 	flex-direction: row;
 	justify-content: space-around;
 	align-content: center;
-	width: 180px;
-	height: 50px;
+
+}
+.searchBtnDiv {	
+	width: 800px;
 }
 .btn-secondary
 .button {
@@ -49,8 +51,12 @@ body {
     color: white !important;
     cursor: pointer !important;
     border-color: white !important;
-    width: 100px;
+    width: 160px;
 	height: 60px;
+}
+.wideBtn {
+	width: 240px;
+	margin: 1em;
 }
 .nameField {
 	display: flex;
@@ -92,12 +98,11 @@ body {
 .form-control,
 .populateSearch {
 	display: flex;
-	margin: 20px auto !important;
-	width: 800px !important;
+	margin: 20px auto;
+		width: 100%;
 	padding: 2px 4px !important;
 	padding-bottom: 5px !important;
 }
-
 a,
 a:link,
 a:visited {

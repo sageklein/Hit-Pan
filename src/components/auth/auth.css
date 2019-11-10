@@ -2,23 +2,23 @@ body {
 	background-color: black !important;
 }
 .authButton {
-	background-color: Transparent !important;
+	background-color: Transparent;
 	color: #d563a3;
 	padding: 15px 32px;
 	text-align: center;
 	cursor: pointer;
-	font-size: 20px !important;
-	letter-spacing: 4px !important;
+	font-size: 20px;
+	letter-spacing: 4px;
 	border: 0px;
+	margin-top: 280px;
 }
 .cancelButton,
 .saveButton {
 	background-color: rgb(101, 89, 154) !important;;
-    color: white !important;
-    cursor: pointer !important;
-    border-color: white !important;
+    color: white;
+    cursor: pointer;
+    border-color: white;
 }
-
 .authContainer {
 	display: flex;
 	align-self: center;
