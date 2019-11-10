@@ -76,16 +76,15 @@ h3 {
     color: white !important;
     cursor: pointer !important;
     border-color: white !important;
-    width: 100px;
+    width: 160px;
 	height: 60px;
 }
 
-.form-control, .populateSearch, .noteFormInput,
-#note.noteFormInput.form-control
+.form-control, .populateSearch,
+.noteFormInput
 {
-    display: flex;
-    width: 700px !important;
-    align-self: flex-start !important;
+    width: 100%;
+    margin: 0px;
 }
 
 

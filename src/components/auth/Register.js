@@ -80,9 +80,11 @@ class Register extends Component {
 		);
 		return (
 			<>
+			<div className="authButtonWrapper">
 				<button className="authButton" onClick={this.toggle}>
 					Get Started
 				</button>
+				</div>
 
 				<Modal
 					isOpen={this.state.modal}

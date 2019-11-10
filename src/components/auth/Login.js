@@ -76,9 +76,11 @@ class Login extends Component {
 			{styles}
 			<div className="container">
 				<div className="authContainer">
+					<div className="authButtonWrapper">
 					<button className="authButton" onClick={this.toggle}>
 						Login
 					</button>
+					</div>
 
 					<Modal
 						isOpen={this.state.modal}
@@ -131,8 +133,6 @@ class Login extends Component {
 					</Modal>
 
 					{/* <Register /> calls the component Register and its contents from Register.js to display on the login page. */}
-
-					<div></div>
 					<Register />
 				</div>
 			</div>
