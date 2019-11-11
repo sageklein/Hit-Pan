@@ -26,17 +26,17 @@ class CollectionParent extends Component {
 	render() {
 		return (
 			<>
-				<div className="container">
-					<div className="text-block">
-						<section className="collectionParent">
-							<CollectionList
-								collections={this.state.collections}
-								getData={this.getData}
-								{...this.props}
-							/>
-						</section>
+				<div className="background-collection">
+					<div className="container">
+							<section className="collectionParent">
+								<CollectionList
+									collections={this.state.collections}
+									getData={this.getData}
+									{...this.props}
+								/>
+							</section>
+						</div>
 					</div>
-				</div>
 			</>
 		);
 	}

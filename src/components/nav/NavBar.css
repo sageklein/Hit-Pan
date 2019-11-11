@@ -5,16 +5,13 @@
     display: inline-block;
     vertical-align: top;
     width: auto;
-    height: 70px;
+    height: 80px;
 }
 .logout {
     display: inline-block;
     vertical-align: top, left;
     width: auto;
-    height: 70px;
+    height: 80px;
     cursor: pointer;
-}
-.navbar{
-    margin-bottom: -30px;
 }
 

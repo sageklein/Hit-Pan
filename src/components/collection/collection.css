@@ -13,9 +13,9 @@ h3 {
 	font-size: 15px;
 	letter-spacing: 6px;
 }
-
 .collection-block {
-	display: flex;
+    display: flex;
+    justify-content: center;
 	padding: 2%;
 	margin: 0.2em;
 }
@@ -37,26 +37,26 @@ h3 {
 	letter-spacing: 3px;
 }
 .card-content {
-	/* display: flex; */
+    display: flex;
 	flex-direction: column;
 	border-radius: 8px;
 	background-color: transparent;
-	width: 800px;
+	width: 700px;
 }
 .collectCard {
    	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	justify-content: center;
-    background-image: url(../../images/wishcollbg.jpeg);
-    opacity: 0.8;
+    background-image: url(../../images/work.jpeg);
+    opacity: 0.7;
     border: 1px solid white;
 	background-repeat: no-repeat;
 	background-size: cover;
 	font-family: Tahoma;
 	font-size: 20px;
 	letter-spacing: 4px;
-	height: 800px;
+	height: 700px;
 	width: 100%; 
 }
 
@@ -76,8 +76,8 @@ h3 {
     color: white !important;
     cursor: pointer !important;
     border-color: white !important;
-    width: 160px;
-	height: 60px;
+    width: 140px;
+	height: 40px;
 }
 
 .form-control, .populateSearch,
