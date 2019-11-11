@@ -27,9 +27,9 @@ class CollectionNotes extends Component {
 			id: this.state.id,
 			note: this.state.note,
 		};
-		APIManager.put("collections", newNote, newNote.id).then(() =>
-			this.props.history.push("/collectionParent")
-		);
+        APIManager.put("collections", newNote, newNote.id)
+			.then(() => this.props.getData())
+			.then(() => this.props.history.push("/collectionParent"));
 	};
 
 	componentDidMount() {

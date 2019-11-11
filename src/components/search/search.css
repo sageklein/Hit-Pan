@@ -12,17 +12,18 @@
 	justify-content: space-between;
 	margin: 0.2em;
 }
-body {
-	background-image: url("../../images/bgmaybe.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
+.background-search {
+	background-image: url("../../images/bg.jpg");
+	background-position: cover; 
+	background-size: 800px, auto;
+
 }
 .makeup-card {
 	display: flex;
 	align-items: center;
 	flex-direction: column;
 	justify-content: center;
-	background-image: url(../../images/purple.jpg);
+	background-color: "transparent";
 	background-repeat: no-repeat;
 	background-size: cover;
 	color: white;
@@ -55,7 +56,7 @@ body {
 	height: 60px;
 }
 .wideBtn {
-	width: 240px;
+	width: 220px;
 	margin: 1em;
 }
 .nameField {
@@ -99,7 +100,7 @@ body {
 .populateSearch {
 	display: flex;
 	margin: 20px auto;
-		width: 100%;
+	width: 100%;
 	padding: 2px 4px !important;
 	padding-bottom: 5px !important;
 }

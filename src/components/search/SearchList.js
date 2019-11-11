@@ -29,43 +29,40 @@ class SearchList extends Component {
 
 	render() {
 		return (
-			<div className="searchBtnDiv">
-				<select
-					value={this.state.brand}
-					className="form-control"
-					type="select"
-					id="brand"
-					placeholder="Search Brand"
-					aria-label="Search"
-					onChange={this.handleFieldChange}
-				>
-					<option>Choose Brand</option>
-					<option
-						value="colourpop"
+
+				<div className="searchBtnDiv">
+					<select
+						value={this.state.brand}
+						className="form-control"
+						type="select"
+						id="brand"
+						placeholder="Search Brand"
+						aria-label="Search"
+						onChange={this.handleFieldChange}
 					>
-						Colourpop
-					</option>
-					<option value="e.l.f.">e.l.f.</option>
-					<option value="maybelline">Maybelline</option>
-					<option value="smashbox">Smashbox</option>
-				</select>
-				<Input
-					className="form-control"
-					type="search"
-					id="productType"
-					placeholder="Search Product"
-					aria-label="Search"
-					onChange={this.handleFieldChange}
-				></Input>
-				<Button
-					className="button"
-					type="submit"
-					required
-					onClick={this.search}
-				>
-					Search
-				</Button>
-			</div>
+						<option>Choose Brand</option>
+						<option value="colourpop">Colourpop</option>
+						<option value="e.l.f.">e.l.f.</option>
+						<option value="maybelline">Maybelline</option>
+						<option value="smashbox">Smashbox</option>
+					</select>
+					<Input
+						className="form-control"
+						type="search"
+						id="productType"
+						placeholder="Search Product"
+						aria-label="Search"
+						onChange={this.handleFieldChange}
+					></Input>
+					<Button
+						className="button"
+						type="submit"
+						required
+						onClick={this.search}
+					>
+						Search
+					</Button>
+				</div>
 		);
 	}
 }

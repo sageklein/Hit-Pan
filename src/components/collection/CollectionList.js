@@ -12,19 +12,20 @@ class CollectionList extends Component {
 
 	render() {
 		return (
-			<div className="collection-block">
-				<section className="collectionParent">
-					{this.props.collections.map(product => (
-						<CollectionCard
-							user={this.props.user}
-							getData={this.getData}
-							key={product.id}
-							product={product}
-							{...this.props}
-						/>
-					))}
-				</section>
-			</div>
+
+				<div className="collection-block">
+					<section className="collectionParent">
+						{this.props.collections.map(product => (
+							<CollectionCard
+								user={this.props.user}
+								getData={this.getData}
+								key={product.id}
+								product={product}
+								{...this.props}
+							/>
+						))}
+					</section>
+				</div>
 		);
 	}
 }

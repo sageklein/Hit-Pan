@@ -1,72 +1,71 @@
-body {
-	background-image: url("../../images/bgmaybe.jpg");
-	background-repeat: no-repeat;
-    background-size: center;
-    background-position: bottom; 
+
+h2 {
+	direction: center;
+	font-family: Tahoma;
+	font-size: 10px;
+	letter-spacing: 6px;
 }
-.wishParent {
+
+h3 {
+	display: block;
+	direction: center;
+	font-family: Tahoma;
+	font-size: 15px;
+	letter-spacing: 6px;
+}
+.wish-block {
     display: flex;
-    flex-direction: column;
-    border-radius: 8px;
-    padding: 2%;
-    margin: .2em;
+    justify-content: center;
+	padding: 2%;
+	margin: 0.2em;
+}
+
+.cardProdPrice,
+.rating,
+.cardProdName  {
+	display: flex;
+	border-radius: 8px;
+	padding: 1%;
+	margin: 0em;
+}
+.name,
+.price,
+.rate {
+    color: white;
+	font-family: Tahoma;
+	font-size: 18px;
+	letter-spacing: 3px;
 }
 .card-content {
     display: flex;
-    flex-direction: row;
-    border-radius: 8px;
-    background-color: transparent !important;
-    padding: 2%;
-    margin: .2em;
-    width: 800px;
+	flex-direction: column;
+	border-radius: 8px;
+	background-color: transparent;
+	width: 700px;
 }
-.container
- {
-    display: flex;
-    justify-content: center, space-around;
-    align-items: center;
-    flex-direction: column;
-    border-radius: 0px;
-    margin: 50px auto;
-    width: 840px;
-}
-
-.prodImg {
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row;
-    margin: 50px auto;
-    height: auto;
-    width: 200px;
-    padding: 1px 0px;
-}
-.btn {
-	display: flex;
-	align-content: center;
-	width: 200px;
-	height: 60px;
-}
-
-.wish-card{
-    display: flex;
-    color: white;
+.wishCard {
+   	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	justify-content: center;
-    background-image: url(../../images/perfect.jpeg);
-    opacity: 0.8;
+    background-image: url(../../images/work.jpeg);
+    opacity: 0.7;
     border: 1px solid white;
 	background-repeat: no-repeat;
 	background-size: cover;
 	font-family: Tahoma;
 	font-size: 20px;
 	letter-spacing: 4px;
-	height: 800px;
+	height: 700px;
 	width: 100%; 
 }
-a,
-a:link,
-a:visited {
-    color: white;
-    text-decoration: none;
+
+.prodImg {
+	display: flex;
+	justify-content: space-around;
+	flex-direction: row;
+	margin: 50px auto;
+	height: auto;
+	width: 200px;
+	padding: 0px 0px;
 }

@@ -4,7 +4,12 @@ import React, { Component } from "react";
 
 class SearchMain extends Component {
 	render() {
-		return <></>;
+		
+			return (
+				<>
+					<div className="background-search"></div>
+				</>
+			);
 	}
 }
 

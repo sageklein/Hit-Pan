@@ -1,16 +1,29 @@
 .text-block {
-    padding: .5%;
-    width: 950px;
+    display: flex;
+    justify-content: center;
+	padding: .8%;
+	margin: 0.2em;
 }
 .linkSearch .linkWish .linkCollection {
 	display: flex;
 	justify-content: flex-start;
-	text-shadow : 5px 10px 2px #ff0000, -3px 6px 5px #0000ff !important;
+	text-shadow : 2px 2px black !important;
+}
+body {
+	background-image: url("../../images/bgall.jpg");
+	background-repeat: no-repeat;
+	background-attachment:fixed;
+	background-position: center bottom;
+	background-size: 1600px, auto; 
 }
 .searchListDash,
 .wishListDash, 
 .collectionListDash {
   opacity: 0.75;
+  border: 2px solid white;
+}
+.apiDash {
+  opacity: 0.9;
   border: 2px solid white;
 }
 .searchListDash {
@@ -24,7 +37,7 @@
 	background-repeat: no-repeat;
 	background-position: center;
 	height: 280px;
-	width: 100%;
+	width: 950px;
 }
 .wishListDash {
 	display: flex;
@@ -37,7 +50,7 @@
 	background-repeat: no-repeat;
 	background-position: center;
 	height: 290px;
-	width: 100%;
+	width: 950px;
 }
 .collectionListDash {
 	display: flex;
@@ -50,7 +63,7 @@
 	background-repeat: no-repeat;
 	background-position: center;
 	height: 290px;
-	width: 100%;
+	width: 950px;
 }
 
 .apiDash {
@@ -61,11 +74,11 @@
 	align-items: center;
 	justify-content: space-between;
 	justify-content: center;
-	background-image: url(../../images/purple.jpg);
+	background-image: url(../../images/apinew.jpg);
 	background-repeat: no-repeat;
-	background-size: cover;
-	min-height: 900px;
-	width: 100%;
+	background-attachment:fixed;
+	  background-size: cover; 
+	  min-height: 800px;
 }
 
 /* link */
@@ -83,6 +96,7 @@ h3 span {
   font-size: 30px;
   line-height: 30px;
   color: white;
-  text-shadow: 0 13.36px 8.896px #dedede,0 -1px 1px #fff;
+  text-shadow: 0 13.36px 8.896px #dedede,0 -1px 1px #fff ;
+  
   letter-spacing: 4px;
 }

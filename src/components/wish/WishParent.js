@@ -25,17 +25,17 @@ class WishParent extends Component {
 	render() {
 		return (
 			<>
-				<div className="container">
-					<div className="text-block">
-						<section className="collectionParent">
-							<WishList
-								products={this.state.products}
-								getData={this.getData}
-								{...this.props}
-							/>
-						</section>
+				<div className="background-wish">
+					<div className="container">
+							<section className="collectionParent">
+								<WishList
+									products={this.state.products}
+									getData={this.getData}
+									{...this.props}
+								/>
+							</section>
+						</div>
 					</div>
-				</div>
 			</>
 		);
 	}

@@ -4,7 +4,7 @@ import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import { Button } from "reactstrap";
 import APIManager from "../../modules/APIManager";
-import "../wish/wishlist.css";
+import "./wishlist.css";
 
 class WishCard extends Component {
 	state = {
@@ -28,7 +28,7 @@ class WishCard extends Component {
 
 	render() {
 		return (
-			<div className="wish-card">
+			<div className="wishCard">
 				<div className="card-content">
 					<img
 						src={this.props.product.image_link}
@@ -49,7 +49,7 @@ class WishCard extends Component {
 						className="button"
 						type="button"
 						onClick={() =>
-							this.handleDeleteWishItem(this.props.product)
+							this.handleDeleteCollect(this.state.product)
 						}
 					>
 						Delete
@@ -59,5 +59,4 @@ class WishCard extends Component {
 		);
 	}
 }
-
 export default withRouter(WishCard);

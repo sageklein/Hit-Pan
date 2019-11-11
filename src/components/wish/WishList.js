@@ -14,7 +14,8 @@ class WishList extends Component {
 
 	render() {
 		return (
-				<section className="wishParent">
+				<div className="wish-block">
+					<section className="wishParent">
 					{this.props.products.map(product => (
 						<WishCard
 							user={this.props.user}
@@ -24,7 +25,8 @@ class WishList extends Component {
 							{...this.props}
 						/>
 					))}
-				</section>
+					</section>
+				</div>
 		);
 	}
 }
