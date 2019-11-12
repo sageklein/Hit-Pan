@@ -23,7 +23,7 @@ body {
   border: 2px solid white;
 }
 .apiDash {
-  opacity: 0.9;
+  opacity: 0.7;
   border: 2px solid white;
 }
 .searchListDash {
@@ -77,8 +77,8 @@ body {
 	background-image: url(../../images/apinew.jpg);
 	background-repeat: no-repeat;
 	background-attachment:fixed;
-	  background-size: cover; 
-	  min-height: 800px;
+	background-size: cover; 
+	min-height: 800px;
 }
 
 /* link */
@@ -96,7 +96,6 @@ h3 span {
   font-size: 30px;
   line-height: 30px;
   color: white;
-  text-shadow: 0 13.36px 8.896px #dedede,0 -1px 1px #fff ;
-  
+  text-shadow: 2px 2px black;
   letter-spacing: 4px;
 }

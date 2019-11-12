@@ -4,7 +4,7 @@ import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import { Button } from "reactstrap";
 import APIManager from "../../modules/APIManager";
-import "./wishlist.css";
+import "../collection/collection.css"
 
 class WishCard extends Component {
 	state = {
@@ -49,7 +49,7 @@ class WishCard extends Component {
 						className="button"
 						type="button"
 						onClick={() =>
-							this.handleDeleteCollect(this.state.product)
+							this.handleDeleteWishItem(this.state.product)
 						}
 					>
 						Delete

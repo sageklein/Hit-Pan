@@ -27,7 +27,7 @@ class CollectionParent extends Component {
 		return (
 			<>
 				<div className="background-collection">
-					<div className="container">
+
 							<section className="collectionParent">
 								<CollectionList
 									collections={this.state.collections}
@@ -36,7 +36,7 @@ class CollectionParent extends Component {
 								/>
 							</section>
 						</div>
-					</div>
+
 			</>
 		);
 	}
