@@ -58,6 +58,7 @@
 .wideBtn {
 	width: 220px;
 	margin: 1em;
+	opacity: .9 !important;
 }
 .nameField {
 	display: flex;
